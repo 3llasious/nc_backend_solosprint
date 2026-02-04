@@ -1,0 +1,2024 @@
+Connected to nc_news
+a: Result {
+  command: 'SELECT',
+  rowCount: 6,
+  oid: null,
+  rows: [
+    {
+      username: 'tickle122',
+      name: 'Tom Tickle',
+      avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953'
+    },
+    {
+      username: 'grumpy19',
+      name: 'Paul Grump',
+      avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/7/78/Mr-Grumpy-3A.PNG/revision/latest?cb=20170707233013'
+    },
+    {
+      username: 'happyamy2016',
+      name: 'Amy Happy',
+      avatar_url: 'https://vignette1.wikia.nocookie.net/mrmen/images/7/7f/Mr_Happy.jpg/revision/latest?cb=20140102171729'
+    },
+    {
+      username: 'cooljmessy',
+      name: 'Peter Messy',
+      avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/1/1a/MR_MESSY_4A.jpg/revision/latest/scale-to-width-down/250?cb=20170730171002'
+    },
+    {
+      username: 'weegembump',
+      name: 'Gemma Bump',
+      avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/7/7e/MrMen-Bump.png/revision/latest?cb=20180123225553'
+    },
+    {
+      username: 'jessjelly',
+      name: 'Jess Jelly',
+      avatar_url: 'https://vignette.wikia.nocookie.net/mrmen/images/4/4f/MR_JELLY_4A.jpg/revision/latest?cb=20180104121141'
+    }
+  ],
+  fields: [
+    Field {
+      name: 'username',
+      tableID: 18470,
+      columnID: 1,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'name',
+      tableID: 18470,
+      columnID: 2,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'avatar_url',
+      tableID: 18470,
+      columnID: 3,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    }
+  ],
+  _parsers: [ [Function: noParse], [Function: noParse], [Function: noParse] ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: { username: null, name: null, avatar_url: null }
+}
+b: Result {
+  command: 'SELECT',
+  rowCount: 12,
+  oid: null,
+  rows: [
+    {
+      article_id: 1,
+      title: 'Running a Node App',
+      topic: 'coding',
+      author: 'jessjelly',
+      body: 'This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.',
+      created_at: 2020-11-07T06:03:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 2,
+      title: "The Rise Of Thinking Machines: How IBM's Watson Takes On The World",
+      topic: 'coding',
+      author: 'jessjelly',
+      body: 'Many people know Watson as the IBM-developed cognitive super computer that won the Jeopardy! gameshow in 2011. In truth, Watson is not actually a computer but a set of algorithms and APIs, and since winning TV fame (and a $1 million prize) IBM has put it to use tackling tough problems in every industry from healthcare to finance. Most recently, IBM has announced several new partnerships which aim to take things even further, and put its cognitive capabilities to use solving a whole new range of problems around the world.',
+      created_at: 2020-05-14T00:02:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 3,
+      title: '22 Amazing open source React projects',
+      topic: 'coding',
+      author: 'happyamy2016',
+      body: 'This is a collection of open source apps built with React.JS library. In this observation, we compared nearly 800 projects to pick the top 22. (React Native: 11, React: 11). To evaluate the quality, Mybridge AI considered a variety of factors to determine how useful the projects are for programmers. To give you an idea on the quality, the average number of Github stars from the 22 projects was 1,681.',
+      created_at: 2020-02-29T11:12:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 4,
+      title: 'Making sense of Redux',
+      topic: 'coding',
+      author: 'jessjelly',
+      body: 'When I first started learning React, I remember reading lots of articles about the different technologies associated with it. In particular, this one article stood out. It mentions how confusing the ecosystem is, and how developers often feel they have to know ALL of the ecosystem before using React. And as someone who’s used React daily for the past 8 months or so, I can definitely say that I’m still barely scratching the surface in terms of understanding how the entire ecosystem works! But my time spent using React has given me some insight into when and why it might be appropriate to use another technology — Redux (a variant of the Flux architecture).',
+      created_at: 2020-09-11T20:12:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 5,
+      title: 'Please stop worrying about Angular 3',
+      topic: 'coding',
+      author: 'jessjelly',
+      body: 'Another Angular version planned already? Whaaaat? Didn’t Angular 2 just ship? Why Angular 3? What? Why? First off, there is no massive rewrite, and won’t be for Angular 3. Secondly, let me explain the future of Angular 2 and what Angular 3, Angular 4 will mean for you.',
+      created_at: 2020-04-21T16:06:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/14011035/pexels-photo-14011035.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 6,
+      title: 'JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals',
+      topic: 'coding',
+      author: 'grumpy19',
+      body: 'Functions are objects in JavaScript, as you should know by now, if you have read any of the prerequisite articles. And as objects, functions have methods, including the powerful Apply, Call, and Bind methods. On the one hand, Apply and Call are nearly identical and are frequently used in JavaScript for borrowing methods and for setting the this value explicitly. We also use Apply for variable-arity functions; you will learn more about this in a bit.',
+      created_at: 2020-11-11T15:09:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/4383298/pexels-photo-4383298.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 7,
+      title: 'Using React Native: One Year Later',
+      topic: 'coding',
+      author: 'tickle122',
+      body: 'When I interviewed for the iOS developer opening at Discord last spring, the tech lead Stanislav told me: React Native is the future. We will use it to build our iOS app from scratch as soon as it becomes public. As a native iOS developer, I strongly doubted using web technologies to build mobile apps because of my previous experiences with tools like PhoneGap. But after learning and using React Native for a while, I am glad we made that decision.',
+      created_at: 2020-10-18T00:26:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 8,
+      title: 'Express.js: A Server-Side JavaScript Framework',
+      topic: 'coding',
+      author: 'cooljmessy',
+      body: 'You’re probably aware that JavaScript is the programming language most often used to add interactivity to the front end of a website, but its capabilities go far beyond that—entire sites can be built on JavaScript, extending it from the front to the back end, seamlessly. Express.js and Node.js gave JavaScript newfound back-end functionality—allowing developers to build software with JavaScript on the server side for the first time. Together, they make it possible to build an entire site with JavaScript: You can develop server-side applications with Node.js and then publish those Node.js apps as websites with Express. Because Node.js itself wasn’t intended to build websites, the Express framework is able to layer in built-in structure and functions needed to actually build a site. It’s a pretty lightweight framework that’s great for giving developers extra, built-in web application features and the Express API without overriding the already robust, feature-packed Node.js platform. In short, Express and Node are changing the way developers build websites.',
+      created_at: 2020-10-05T22:23:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/11035482/pexels-photo-11035482.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 9,
+      title: 'Learn HTML5, CSS3, and Responsive WebSite Design in One Go',
+      topic: 'coding',
+      author: 'grumpy19',
+      body: 'Both CSS3 and HTML5 are just about fully supported in all modern browsers, and we there are techniques in place to patch old browsers that lack support. So there is no disadvantage to using CSS3 and HTML5 today. The opposite is true, however: there are many painful, frustrating disadvantages with forgoing HTML5 and CSS3. You may already “know” a bit of HTML5 and a touch of CSS3 (or perhaps you probably know enough old-school HTML and CSS, and with this knowledge, you might have thought you needn’t learn HTML5 and CSS3 fully.',
+      created_at: 2020-05-26T14:06:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 10,
+      title: 'An Introduction to JavaScript Object Notation (JSON) in JavaScript and .NET',
+      topic: 'coding',
+      author: 'cooljmessy',
+      body: 'When designing an application that will communicate with a remote computer, a data format and exchange protocol must be selected. There are a variety of open, standardized options, and the ideal choice depends on the applications requirements and pre-existing functionality. For example, SOAP-based web services format the data in an XML payload wrapped within a SOAP envelope. While XML works well for many application scenarios, it has some drawbacks that make it less than ideal for others. One such space where XML is often less than ideal is with Ajax-style web applications. Ajax is a technique used for building interactive web applications that provide a snappier user experience through the use of out-of-band, lightweight calls to the web server in lieu of full-page postbacks. These asynchronous calls are initiated on the client using JavaScript and involve formatting data, sending it to a web server, and parsing and working with the returned data. While most browsers can construct, send, and parse XML, JavaScript Object Notation (or JSON) provides a standardized data exchange format that is better-suited for Ajax-style web applications. JSON is an open, text-based data exchange format (see RFC 4627). Like XML, it is human-readable, platform independent, and enjoys a wide availability of implementations. Data formatted according to the JSON standard is lightweight and can be parsed by JavaScript implementations with incredible ease, making it an ideal data exchange format for Ajax web applications. Since it is primarily a data format, JSON is not limited to just Ajax web applications, and can be used in virtually any scenario where applications need to exchange or store structured information as text. This article examines the JSON standard, its relationship to JavaScript, and how it compares to XML. Jayrock, an open-source JSON implementation for .NET, is discussed and examples of creating and parsing JSON messages are provided in JavaScript and C#.',
+      created_at: 2020-07-02T11:23:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/11035481/pexels-photo-11035481.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 11,
+      title: 'Designing Better JavaScript APIs',
+      topic: 'coding',
+      author: 'tickle122',
+      body: 'At some point or another, you will find yourself writing JavaScript code that exceeds the couple of lines from a jQuery plugin. Your code will do a whole lot of things; it will (ideally) be used by many people who will approach your code differently. They have different needs, knowledge and expectations.',
+      created_at: 2020-07-06T23:13:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 12,
+      title: 'The battle for Node.js security has only begun',
+      topic: 'coding',
+      author: 'tickle122',
+      body: 'The founder of the Node Security Project says Node.js still has common vulnerabilities, but progress has been made to make it more secure. Appearing at the recent Node Community Convention in San Francisco, project founder Adam Baldwin, chief security officer at Web consulting company &yet, emphasized risks, protections, and progress. Baldwin sees four risks within the Node ecosystem pertinent to the enterprise: the code dependency tree, bugs, malicious actors, and people. I think of [the dependency tree] more as the dependency iceberg, to be honest, Baldwin said, where your code is the ship and your dependencies that you have with your packaged JSON is that little tiny iceberg at the top. But developers need to be aware of the massive iceberg underneath, he stressed.',
+      created_at: 2020-11-15T13:25:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/10845119/pexels-photo-10845119.jpeg?w=700&h=700'
+    }
+  ],
+  fields: [
+    Field {
+      name: 'article_id',
+      tableID: 18487,
+      columnID: 1,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'title',
+      tableID: 18487,
+      columnID: 2,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'topic',
+      tableID: 18487,
+      columnID: 3,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'author',
+      tableID: 18487,
+      columnID: 4,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'body',
+      tableID: 18487,
+      columnID: 5,
+      dataTypeID: 25,
+      dataTypeSize: -1,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'created_at',
+      tableID: 18487,
+      columnID: 6,
+      dataTypeID: 1114,
+      dataTypeSize: 8,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'votes',
+      tableID: 18487,
+      columnID: 7,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'article_img_url',
+      tableID: 18487,
+      columnID: 8,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    }
+  ],
+  _parsers: [
+    [Function: parseInteger],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: parseDate],
+    [Function: parseInteger],
+    [Function: noParse]
+  ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: {
+    article_id: null,
+    title: null,
+    topic: null,
+    author: null,
+    body: null,
+    created_at: null,
+    votes: null,
+    article_img_url: null
+  }
+}
+c: Result {
+  command: 'SELECT',
+  rowCount: 63,
+  oid: null,
+  rows: [
+    {
+      comment_id: 1,
+      article_id: 18,
+      votes: -1,
+      body: 'Itaque quisquam est similique et est perspiciatis reprehenderit voluptatem autem. Voluptatem accusantium eius error adipisci quibusdam doloribus.',
+      author: 'tickle122',
+      created_at: 2020-05-21T22:19:00.000Z
+    },
+    {
+      comment_id: 5,
+      article_id: 17,
+      votes: -5,
+      body: 'Quod qui quia dignissimos sit tempore vel reprehenderit. Ipsa ipsa veritatis architecto corporis et et non. Sed alias occaecati eum dignissimos sint eius. Ad ea iste quas quia velit libero voluptatem voluptatem. Animi illo nisi nulla quia sapiente omnis dolorem nulla. Sunt dolor similique.',
+      author: 'weegembump',
+      created_at: 2020-04-03T20:17:00.000Z
+    },
+    {
+      comment_id: 6,
+      article_id: 35,
+      votes: -5,
+      body: 'Veritatis animi et voluptates nesciunt officia facere eaque. Eligendi earum explicabo necessitatibus aut dolorem nisi esse nesciunt. Non iusto rem ut consequuntur quam ut rem sed. Velit laboriosam consectetur enim delectus eos sit veritatis eveniet perspiciatis.',
+      author: 'grumpy19',
+      created_at: 2020-07-16T08:16:00.000Z
+    },
+    {
+      comment_id: 9,
+      article_id: 19,
+      votes: -1,
+      body: 'Ea iure voluptas. Esse vero et dignissimos blanditiis commodi rerum dicta omnis modi.',
+      author: 'cooljmessy',
+      created_at: 2020-01-04T05:14:00.000Z
+    },
+    {
+      comment_id: 14,
+      article_id: 4,
+      votes: -4,
+      body: 'Iure quas est omnis porro. Est in est distinctio sequi consectetur rerum deserunt. Et et reiciendis. Consequatur distinctio sint porro neque molestiae.',
+      author: 'weegembump',
+      created_at: 2020-08-14T13:09:00.000Z
+    },
+    {
+      comment_id: 19,
+      article_id: 28,
+      votes: -3,
+      body: 'Id adipisci saepe dolorum et veritatis qui et voluptatibus. Error consequuntur architecto consequatur assumenda rerum similique quo. Quas omnis quam labore exercitationem pariatur veniam assumenda. Tempore maiores rerum. Eum voluptates non repudiandae magnam illo voluptatum. Qui praesentium asperiores rerum vel.',
+      author: 'tickle122',
+      created_at: 2020-06-19T15:03:00.000Z
+    },
+    {
+      comment_id: 29,
+      article_id: 36,
+      votes: -2,
+      body: 'Perferendis quia et nihil. Quasi ut voluptates sapiente et accusantium vel qui reprehenderit ratione. Autem alias voluptatem accusamus nesciunt beatae vero. Itaque repellat omnis et velit cum corporis aut id voluptas. Nostrum unde fuga ea. Perferendis quas maiores.',
+      author: 'jessjelly',
+      created_at: 2020-09-13T06:23:00.000Z
+    },
+    {
+      comment_id: 35,
+      article_id: 19,
+      votes: -2,
+      body: 'Accusamus error recusandae iure. Omnis ab aut id. Nihil perspiciatis aut unde recusandae voluptatum placeat.',
+      author: 'happyamy2016',
+      created_at: 2020-06-07T07:10:00.000Z
+    },
+    {
+      comment_id: 43,
+      article_id: 8,
+      votes: -2,
+      body: 'Ipsam quis ad consequatur iure voluptas accusantium voluptatem unde. Cumque omnis mollitia natus nemo deleniti rerum enim cumque aut. Quod quis est fuga.',
+      author: 'grumpy19',
+      created_at: 2020-01-18T08:17:00.000Z
+    },
+    {
+      comment_id: 46,
+      article_id: 26,
+      votes: -3,
+      body: 'Non sunt quos aut facere. Corporis molestiae aut soluta aut rerum animi voluptatibus.',
+      author: 'weegembump',
+      created_at: 2020-10-05T06:05:00.000Z
+    },
+    {
+      comment_id: 51,
+      article_id: 3,
+      votes: -3,
+      body: 'Eius dolor ipsa eaque qui sed accusantium est tenetur omnis. Eligendi necessitatibus sunt voluptate occaecati et quis consequuntur aut. Maxime nihil ut quia culpa.',
+      author: 'grumpy19',
+      created_at: 2020-01-14T03:12:00.000Z
+    },
+    {
+      comment_id: 55,
+      article_id: 6,
+      votes: -3,
+      body: 'Ut et libero reiciendis. Tenetur quibusdam veniam in atque corrupti excepturi tenetur qui et. Qui ut autem minus aut explicabo in cumque dolorum. Voluptatem est perferendis velit. Eaque doloremque asperiores error.',
+      author: 'jessjelly',
+      created_at: 2020-01-16T23:20:00.000Z
+    },
+    {
+      comment_id: 63,
+      article_id: 2,
+      votes: -1,
+      body: 'Est pariatur quis ipsa culpa unde temporibus et accusantium rerum. Consequatur in occaecati aut non similique aut quibusdam. Qui sunt magnam iure blanditiis. Et est non enim. Est ab vero dolor.',
+      author: 'jessjelly',
+      created_at: 2020-08-12T22:10:00.000Z
+    },
+    {
+      comment_id: 64,
+      article_id: 6,
+      votes: -5,
+      body: 'Ad qui ut enim qui numquam quis. Reprehenderit rem non nulla dolor aut totam corporis illo. Et ea maxime consequuntur nihil delectus dolores qui in aliquam. Ut et eius id nesciunt necessitatibus beatae quo. Est qui provident officia in dolor. Assumenda voluptas dolor.',
+      author: 'grumpy19',
+      created_at: 2020-09-23T08:15:00.000Z
+    },
+    {
+      comment_id: 69,
+      article_id: 23,
+      votes: -1,
+      body: 'Totam et dolor magnam et voluptatum. A in adipisci.',
+      author: 'tickle122',
+      created_at: 2020-08-14T12:08:00.000Z
+    },
+    {
+      comment_id: 77,
+      article_id: 8,
+      votes: -2,
+      body: 'Hic qui omnis qui sit deserunt velit labore commodi repellat. Minus voluptatum dolore libero voluptatem praesentium aut iusto harum. Consequatur sit quasi. Est ad minus inventore ut reiciendis. Quos incidunt rerum. Ut omnis in voluptatum nesciunt.',
+      author: 'tickle122',
+      created_at: 2020-11-06T19:20:00.000Z
+    },
+    {
+      comment_id: 80,
+      article_id: 31,
+      votes: -5,
+      body: 'Voluptatem voluptas unde. Quam tempore recusandae voluptatem similique iusto repudiandae et. Tenetur dolores possimus labore. Incidunt quae ipsa qui quas. Sunt suscipit aliquid vitae.',
+      author: 'cooljmessy',
+      created_at: 2020-07-14T02:02:00.000Z
+    },
+    {
+      comment_id: 82,
+      article_id: 11,
+      votes: -4,
+      body: 'Facilis ipsam illum aut voluptatibus. Repudiandae cupiditate quo fugiat earum est ut autem repudiandae excepturi. Fuga voluptatem iusto ut. Nulla sequi culpa qui eaque. Architecto non veniam distinctio.',
+      author: 'happyamy2016',
+      created_at: 2020-08-19T07:08:00.000Z
+    },
+    {
+      comment_id: 83,
+      article_id: 24,
+      votes: -2,
+      body: 'Velit in assumenda quo repudiandae qui eaque. Qui dolor ad iusto optio magnam suscipit.',
+      author: 'weegembump',
+      created_at: 2020-04-08T21:01:00.000Z
+    },
+    {
+      comment_id: 88,
+      article_id: 5,
+      votes: -3,
+      body: 'Minus minus sit non fugiat sunt et nostrum aut et. Dignissimos qui nemo quos fuga qui temporibus occaecati aut. Explicabo dolor commodi officia nulla totam inventore.',
+      author: 'weegembump',
+      created_at: 2020-05-26T15:11:00.000Z
+    },
+    {
+      comment_id: 94,
+      article_id: 29,
+      votes: -4,
+      body: 'Voluptatum aut facilis odit sint. Iste ab ut mollitia aut odio. Similique aut a ut est impedit. Similique dolorum possimus ipsum voluptatem iste non commodi placeat quia. Vero aperiam eum voluptatem aut sed totam dicta suscipit.',
+      author: 'weegembump',
+      created_at: 2020-04-15T06:17:00.000Z
+    },
+    {
+      comment_id: 98,
+      article_id: 17,
+      votes: -3,
+      body: 'Delectus nostrum autem. Dolore est id veniam maxime aliquid omnis nam cupiditate consequatur. Eveniet similique et voluptatem voluptatem illo. Quam officiis aut molestias hic est omnis. Dolor enim dolores. Quo explicabo reprehenderit reprehenderit nostrum magni in.',
+      author: 'grumpy19',
+      created_at: 2020-02-07T02:23:00.000Z
+    },
+    {
+      comment_id: 108,
+      article_id: 17,
+      votes: -1,
+      body: 'Magni similique tempore a quia officiis ipsam ut non. Eum laborum dicta sint illo nihil quia maiores. Reiciendis sit voluptate sed quae iste temporibus.',
+      author: 'grumpy19',
+      created_at: 2020-08-02T08:22:00.000Z
+    },
+    {
+      comment_id: 113,
+      article_id: 23,
+      votes: -3,
+      body: 'Accusantium est officiis labore dolorem hic maiores quae quo. Et rerum sequi.',
+      author: 'cooljmessy',
+      created_at: 2020-01-17T17:13:00.000Z
+    },
+    {
+      comment_id: 114,
+      article_id: 34,
+      votes: -4,
+      body: 'Eligendi placeat aspernatur omnis delectus maxime inventore at porro. Accusantium nobis totam fugiat debitis quia repellat quo qui voluptatem. Laboriosam nesciunt distinctio et aut itaque ipsa aut. Cum accusantium et et recusandae numquam quas et. Porro minima accusantium atque quo illo.',
+      author: 'tickle122',
+      created_at: 2020-05-09T07:11:00.000Z
+    },
+    {
+      comment_id: 124,
+      article_id: 34,
+      votes: -1,
+      body: 'Vitae laudantium molestiae neque ut dicta fuga similique. Sit nesciunt magni sit beatae. Porro recusandae aut exercitationem eligendi voluptas. Dolore eligendi inventore magni voluptatem quia ut ut.',
+      author: 'grumpy19',
+      created_at: 2020-10-17T22:05:00.000Z
+    },
+    {
+      comment_id: 135,
+      article_id: 27,
+      votes: -1,
+      body: 'Quam officiis reprehenderit architecto omnis est facere inventore. Expedita est enim dolore debitis velit. Quo facilis accusantium error.',
+      author: 'happyamy2016',
+      created_at: 2020-09-07T06:02:00.000Z
+    },
+    {
+      comment_id: 137,
+      article_id: 26,
+      votes: -5,
+      body: 'Nesciunt aliquid ex et architecto beatae fugit. Et delectus quam culpa rerum hic repellendus laudantium est. Non quasi omnis. Deserunt nisi voluptatem asperiores aspernatur mollitia qui. Molestiae sit voluptates et voluptas voluptas consequatur. Corrupti laboriosam consequatur est tenetur consequuntur id.',
+      author: 'happyamy2016',
+      created_at: 2020-03-20T02:01:00.000Z
+    },
+    {
+      comment_id: 147,
+      article_id: 27,
+      votes: -2,
+      body: 'Qui qui sit earum et laboriosam non. Nobis distinctio qui et sint perspiciatis qui eum. Doloremque animi quia tenetur harum distinctio et.',
+      author: 'weegembump',
+      created_at: 2020-08-23T23:26:00.000Z
+    },
+    {
+      comment_id: 150,
+      article_id: 9,
+      votes: -3,
+      body: 'Doloremque ut reiciendis autem perferendis vel in tempore. Delectus quia illum deleniti fuga dolores dicta velit aut architecto.',
+      author: 'tickle122',
+      created_at: 2020-01-17T16:06:00.000Z
+    },
+    {
+      comment_id: 158,
+      article_id: 22,
+      votes: -5,
+      body: 'Voluptatibus laudantium vel consequuntur explicabo voluptatem adipisci eligendi nihil magni. Dolore in molestias ullam sapiente et aperiam. Et aut est placeat porro dolor et modi reiciendis. Enim fuga exercitationem in. Dolore sint laudantium quos sint et aut possimus.',
+      author: 'happyamy2016',
+      created_at: 2020-06-09T12:10:00.000Z
+    },
+    {
+      comment_id: 159,
+      article_id: 35,
+      votes: -1,
+      body: 'Veniam natus sed nostrum et aut repellendus. Dignissimos quia cum id odio repudiandae impedit aperiam sapiente. Harum sequi non nihil velit modi. Corporis consequatur enim suscipit eos dignissimos voluptas nobis eum.',
+      author: 'cooljmessy',
+      created_at: 2020-09-23T23:05:00.000Z
+    },
+    {
+      comment_id: 171,
+      article_id: 30,
+      votes: -5,
+      body: 'Est voluptas reprehenderit enim necessitatibus blanditiis quia consequatur. Soluta quae quia non veniam corrupti et. Asperiores culpa est ut quam ipsum molestias reiciendis sed molestiae. Ut odit in non odio molestias ab. Voluptates est inventore nihil sunt voluptatem dignissimos et debitis. Nihil et numquam.',
+      author: 'weegembump',
+      created_at: 2020-03-03T05:25:00.000Z
+    },
+    {
+      comment_id: 174,
+      article_id: 34,
+      votes: -2,
+      body: 'Sit dolores similique temporibus omnis. Reiciendis animi similique. Tempore inventore aperiam. Labore dolorem sint molestiae assumenda ipsum.',
+      author: 'cooljmessy',
+      created_at: 2020-09-05T23:02:00.000Z
+    },
+    {
+      comment_id: 181,
+      article_id: 16,
+      votes: -2,
+      body: 'Aut sint ut. Voluptatem enim saepe quasi aut ut qui quasi neque quidem. At nihil quia minus eos harum est accusantium et.',
+      author: 'tickle122',
+      created_at: 2020-03-01T15:09:00.000Z
+    },
+    {
+      comment_id: 182,
+      article_id: 6,
+      votes: -5,
+      body: 'Voluptatem voluptas tempore soluta et rerum quia sed quas ut. Non cumque perferendis voluptate vitae est quis sit enim dolor. Et esse qui est et.',
+      author: 'jessjelly',
+      created_at: 2020-08-19T18:15:00.000Z
+    },
+    {
+      comment_id: 198,
+      article_id: 30,
+      votes: -3,
+      body: 'Odio accusamus eius voluptatem voluptatem esse magni est in aperiam. Voluptatem quam sapiente omnis debitis ut molestiae. Eligendi qui ratione. Maiores occaecati voluptas voluptatem at repellat sint voluptatem. Ut voluptatem optio porro perspiciatis aut dicta quae qui. Minus odio suscipit tempora aspernatur sequi ut est.',
+      author: 'grumpy19',
+      created_at: 2020-04-20T10:25:00.000Z
+    },
+    {
+      comment_id: 200,
+      article_id: 3,
+      votes: -1,
+      body: 'Fugiat aut ipsam ea commodi natus commodi officiis amet. Rerum quae error. Vel eum voluptates corrupti aperiam.',
+      author: 'jessjelly',
+      created_at: 2020-05-20T06:15:00.000Z
+    },
+    {
+      comment_id: 202,
+      article_id: 16,
+      votes: -3,
+      body: 'Quia numquam ut fuga. Laudantium perspiciatis distinctio rerum sunt itaque non ipsum. Nihil necessitatibus voluptatem. Reiciendis nobis quae quo et mollitia soluta. Voluptates deleniti soluta ducimus natus eos enim sunt. Totam et perferendis qui reiciendis.',
+      author: 'happyamy2016',
+      created_at: 2020-07-06T12:10:00.000Z
+    },
+    {
+      comment_id: 203,
+      article_id: 11,
+      votes: -1,
+      body: 'Fugiat voluptatibus numquam aut aut sit quae magni qui. Ipsam sed reprehenderit aliquid quibusdam. Id ducimus quisquam modi sed repellendus quia omnis aliquam et. Qui blanditiis voluptate doloremque esse qui sint deserunt voluptas. Et rerum et rerum quia repudiandae vero omnis voluptas sit. Ipsam eos fugiat omnis rem quia sequi omnis reprehenderit minus.',
+      author: 'tickle122',
+      created_at: 2020-01-09T19:17:00.000Z
+    },
+    {
+      comment_id: 206,
+      article_id: 31,
+      votes: -3,
+      body: 'Ea cum vitae sunt. Rerum inventore voluptates dolores consequuntur recusandae esse quia velit at. Voluptatem sit voluptates temporibus. Et sunt harum ad sit ut aperiam. Omnis enim eos aspernatur. Maxime nam quasi error dolor et qui quaerat accusamus temporibus.',
+      author: 'cooljmessy',
+      created_at: 2020-03-25T17:08:00.000Z
+    },
+    {
+      comment_id: 211,
+      article_id: 34,
+      votes: -3,
+      body: 'Molestiae ut esse a error necessitatibus doloribus eligendi nesciunt. Ea minus voluptatem quae maxime distinctio.',
+      author: 'cooljmessy',
+      created_at: 2020-08-26T17:24:00.000Z
+    },
+    {
+      comment_id: 215,
+      article_id: 19,
+      votes: -3,
+      body: 'Maxime beatae esse veniam cum nihil. Mollitia at ducimus aliquam. Doloribus sed est. Modi ut neque et velit expedita. Aliquid in assumenda.',
+      author: 'grumpy19',
+      created_at: 2020-08-21T08:16:00.000Z
+    },
+    {
+      comment_id: 216,
+      article_id: 35,
+      votes: -2,
+      body: 'Similique ea aperiam incidunt numquam ratione dignissimos vero reiciendis voluptatem. Saepe quas soluta ut odit. Laboriosam et aspernatur et rerum mollitia optio. Est nisi consequatur veritatis aut occaecati soluta quae beatae. Eligendi debitis ratione temporibus aperiam.',
+      author: 'weegembump',
+      created_at: 2020-11-20T10:12:00.000Z
+    },
+    {
+      comment_id: 218,
+      article_id: 12,
+      votes: -3,
+      body: 'Iste laudantium explicabo nihil officia. Tempora voluptates amet exercitationem sed aut quo. Nostrum totam esse minus distinctio ipsum. Nisi debitis voluptatem rerum nisi qui.',
+      author: 'weegembump',
+      created_at: 2020-05-14T08:24:00.000Z
+    },
+    {
+      comment_id: 223,
+      article_id: 32,
+      votes: -3,
+      body: 'Qui vero officia et delectus quibusdam. Eos qui inventore voluptas. Sed delectus assumenda velit. Nihil nostrum facilis beatae ut architecto sed.',
+      author: 'jessjelly',
+      created_at: 2020-03-08T06:12:00.000Z
+    },
+    {
+      comment_id: 227,
+      article_id: 17,
+      votes: -5,
+      body: 'Et hic sint magnam error necessitatibus numquam molestias sequi. Ad id enim qui sit cum dolorem.',
+      author: 'weegembump',
+      created_at: 2020-02-17T10:11:00.000Z
+    },
+    {
+      comment_id: 229,
+      article_id: 4,
+      votes: -4,
+      body: 'Quod asperiores aut. Rerum ipsa sed quas nobis qui recusandae neque. Est dolorem ipsam.',
+      author: 'jessjelly',
+      created_at: 2020-01-21T02:22:00.000Z
+    },
+    {
+      comment_id: 234,
+      article_id: 16,
+      votes: -3,
+      body: 'Nostrum perspiciatis ratione illum et officia nobis sint et. Dignissimos est sed officia exercitationem. Voluptas voluptate ipsam eius rem sunt est. Accusamus nulla nam est velit. Sapiente rerum est minima eligendi accusamus voluptatem sint optio.',
+      author: 'weegembump',
+      created_at: 2020-05-10T17:11:00.000Z
+    },
+    {
+      comment_id: 243,
+      article_id: 36,
+      votes: -3,
+      body: 'Natus quaerat non harum quae ut et quia. Id aut reiciendis.',
+      author: 'grumpy19',
+      created_at: 2020-03-13T00:13:00.000Z
+    },
+    {
+      comment_id: 247,
+      article_id: 13,
+      votes: -1,
+      body: 'Dolor rem saepe voluptas impedit et. Corrupti qui quod commodi. Quos blanditiis placeat.',
+      author: 'grumpy19',
+      created_at: 2020-05-18T22:05:00.000Z
+    },
+    {
+      comment_id: 252,
+      article_id: 16,
+      votes: -3,
+      body: 'Distinctio laudantium consequatur exercitationem enim magni quod est commodi. Harum consequatur est maiores ipsum accusamus impedit perferendis nobis ipsam. Adipisci excepturi itaque maiores deserunt deserunt occaecati iste. Consectetur non nostrum ex voluptatem in laborum sed ut.',
+      author: 'grumpy19',
+      created_at: 2020-08-02T13:16:00.000Z
+    },
+    {
+      comment_id: 255,
+      article_id: 21,
+      votes: -1,
+      body: 'Voluptatem in distinctio delectus. Inventore fuga quia nemo sint quisquam reiciendis provident. Porro animi nemo qui.',
+      author: 'tickle122',
+      created_at: 2020-02-20T17:18:00.000Z
+    },
+    {
+      comment_id: 256,
+      article_id: 4,
+      votes: -5,
+      body: 'Aut fugiat eos distinctio culpa est est maxime. Maiores nihil quos velit minus beatae. Dolore eos tenetur voluptates nemo.',
+      author: 'cooljmessy',
+      created_at: 2020-08-10T12:15:00.000Z
+    },
+    {
+      comment_id: 258,
+      article_id: 8,
+      votes: -1,
+      body: 'Rerum occaecati provident et reprehenderit. Possimus dignissimos quo. Alias ut aut at qui. Ut quasi incidunt porro. Accusantium omnis facilis.',
+      author: 'jessjelly',
+      created_at: 2020-11-10T20:16:00.000Z
+    },
+    {
+      comment_id: 261,
+      article_id: 22,
+      votes: -5,
+      body: 'Delectus id consequatur voluptatem ad sapiente quia optio dolor. Dolorum est ullam vitae.',
+      author: 'grumpy19',
+      created_at: 2020-10-22T18:00:00.000Z
+    },
+    {
+      comment_id: 270,
+      article_id: 29,
+      votes: -5,
+      body: 'Repellat id vel. Ut illo ut voluptas expedita enim aperiam et cumque temporibus. Facilis non iste eos quia ut occaecati est. Soluta molestiae qui quo vel qui. Dolor labore fuga ex voluptatem ut sed similique voluptatem aspernatur. Magnam aperiam iure fuga aut nemo eius aut minima.',
+      author: 'tickle122',
+      created_at: 2020-03-17T17:26:00.000Z
+    },
+    {
+      comment_id: 273,
+      article_id: 21,
+      votes: -5,
+      body: 'Ullam ut consequatur. Vel et harum sed quo. Aliquid rem consequatur est. Esse deleniti voluptatem temporibus. Deleniti maiores officiis mollitia omnis exercitationem dicta cum quia. Earum voluptates qui iusto ipsa magni id.',
+      author: 'weegembump',
+      created_at: 2020-07-26T15:04:00.000Z
+    },
+    {
+      comment_id: 274,
+      article_id: 35,
+      votes: -3,
+      body: 'Quod inventore aut consequuntur rerum aperiam. Laborum nihil ut optio fugit.',
+      author: 'happyamy2016',
+      created_at: 2020-08-25T12:26:00.000Z
+    },
+    {
+      comment_id: 275,
+      article_id: 23,
+      votes: -4,
+      body: 'Nulla similique ullam excepturi tempore. Voluptatem eum vel voluptatem dolores suscipit similique labore aliquam dolores. Est ex eum at voluptate repellat assumenda. Eos asperiores dolor aperiam.',
+      author: 'jessjelly',
+      created_at: 2020-07-21T23:23:00.000Z
+    },
+    {
+      comment_id: 283,
+      article_id: 32,
+      votes: -4,
+      body: 'Ratione tempore et natus incidunt quibusdam minima. Voluptatem quae quae eos reiciendis et quia saepe enim et. Esse sapiente totam ullam nam. Provident repellat velit enim excepturi asperiores qui nostrum similique dicta. Labore repellendus quae ut voluptas voluptatibus. Voluptatibus voluptatum sed nemo harum ad harum repellendus ad.',
+      author: 'happyamy2016',
+      created_at: 2020-01-06T15:17:00.000Z
+    },
+    {
+      comment_id: 290,
+      article_id: 28,
+      votes: -3,
+      body: 'Sunt omnis pariatur dignissimos quibusdam dolore ut non velit autem. Omnis voluptatibus qui aut sunt ut unde. Ut eaque excepturi numquam quis occaecati. Repellat esse voluptas velit eveniet ut pariatur natus. Velit voluptas nostrum quia dignissimos quisquam incidunt.',
+      author: 'jessjelly',
+      created_at: 2020-09-01T18:00:00.000Z
+    },
+    {
+      comment_id: 300,
+      article_id: 22,
+      votes: -1,
+      body: 'Quia nemo est. Maiores animi architecto ad nihil sapiente. Odio in maxime nam assumenda tempora et nisi. Impedit quidem cum neque libero sequi et et impedit. Dignissimos ut molestiae laborum rerum error distinctio quasi hic consectetur. Odio vel qui necessitatibus perspiciatis ipsum quod excepturi saepe.',
+      author: 'jessjelly',
+      created_at: 2020-02-01T03:22:00.000Z
+    }
+  ],
+  fields: [
+    Field {
+      name: 'comment_id',
+      tableID: 18510,
+      columnID: 1,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'article_id',
+      tableID: 18510,
+      columnID: 2,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'votes',
+      tableID: 18510,
+      columnID: 3,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'body',
+      tableID: 18510,
+      columnID: 4,
+      dataTypeID: 25,
+      dataTypeSize: -1,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'author',
+      tableID: 18510,
+      columnID: 5,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'created_at',
+      tableID: 18510,
+      columnID: 6,
+      dataTypeID: 1114,
+      dataTypeSize: 8,
+      dataTypeModifier: -1,
+      format: 'text'
+    }
+  ],
+  _parsers: [
+    [Function: parseInteger],
+    [Function: parseInteger],
+    [Function: parseInteger],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: parseDate]
+  ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: {
+    comment_id: null,
+    article_id: null,
+    votes: null,
+    body: null,
+    author: null,
+    created_at: null
+  }
+}
+d: Result {
+  command: 'SELECT',
+  rowCount: 37,
+  oid: null,
+  rows: [
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'coding' },   { topic: 'coding' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'football' }, { topic: 'football' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'cooking' },  { topic: 'cooking' },
+    { topic: 'football' }
+  ],
+  fields: [
+    Field {
+      name: 'topic',
+      tableID: 18487,
+      columnID: 3,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    }
+  ],
+  _parsers: [ [Function: noParse] ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: { topic: null }
+}
+e: Result {
+  command: 'SELECT',
+  rowCount: 6,
+  oid: null,
+  rows: [
+    {
+      article_id: 6,
+      title: 'JavaScript’s Apply, Call, and Bind Methods are Essential for JavaScript Professionals',
+      topic: 'coding',
+      author: 'grumpy19',
+      body: 'Functions are objects in JavaScript, as you should know by now, if you have read any of the prerequisite articles. And as objects, functions have methods, including the powerful Apply, Call, and Bind methods. On the one hand, Apply and Call are nearly identical and are frequently used in JavaScript for borrowing methods and for setting the this value explicitly. We also use Apply for variable-arity functions; you will learn more about this in a bit.',
+      created_at: 2020-11-11T15:09:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/4383298/pexels-photo-4383298.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 9,
+      title: 'Learn HTML5, CSS3, and Responsive WebSite Design in One Go',
+      topic: 'coding',
+      author: 'grumpy19',
+      body: 'Both CSS3 and HTML5 are just about fully supported in all modern browsers, and we there are techniques in place to patch old browsers that lack support. So there is no disadvantage to using CSS3 and HTML5 today. The opposite is true, however: there are many painful, frustrating disadvantages with forgoing HTML5 and CSS3. You may already “know” a bit of HTML5 and a touch of CSS3 (or perhaps you probably know enough old-school HTML and CSS, and with this knowledge, you might have thought you needn’t learn HTML5 and CSS3 fully.',
+      created_at: 2020-05-26T14:06:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 18,
+      title: 'The People Tracking Every Touch, Pass And Tackle in the World Cup',
+      topic: 'football',
+      author: 'grumpy19',
+      body: 'With each click and drag of a mouse, young soccer fanatics are creating the building blocks of the advanced stats that are changing how the sport is played, watched and analyzed. Opta and Prozone are among the companies that have taken soccer stats far beyond goals and saves, into the realm of pass completion percentage, defensive touches, percentage of aerial balls won, tackle percentage and goals scored above expectation. Cameras alone can’t process all these stats. So companies employ people — mostly young, mostly male, most logging matches in their spare time as a second job — to watch matches and document every event. Their work has helped develop stats that capture the value of players who don’t score many goals, but who set them up with pinpoint passing and hustle. Teams use advanced stats to decide which players to buy and put on the pitch. And fans, whether they like it or not, read and hear more numbers than ever before about this sport that for so long bucked the sports-analytics trend.',
+      created_at: 2020-08-17T14:03:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/1884576/pexels-photo-1884576.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 27,
+      title: 'Thanksgiving Drinks for Everyone',
+      topic: 'cooking',
+      author: 'grumpy19',
+      body: 'Thanksgiving is a foodie’s favorite holiday. Mashed potatoes, cranberry sauce, stuffing, and last but not least, a juicy turkey. Don’t let your meticulous menu fall short of perfection; flavorful cocktails are just as important as the meal. Here are a few ideas that will fit right into your festivities.',
+      created_at: 2020-01-24T23:22:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 32,
+      title: 'Halal food: Keeping pure and true',
+      topic: 'cooking',
+      author: 'grumpy19',
+      body: "CHINA’S cities abound with restaurants and food stalls catering to Muslims as well as to the many other Chinese who relish the distinctive cuisines for which the country’s Muslims are renowned. So popular are kebabs cooked by Muslim Uighurs on the streets of Beijing that the city banned outdoor grills in 2014 in order to reduce smoke, which officials said was exacerbating the capital’s notorious smog (the air today is hardly less noxious). Often such food is claimed to be qing zhen, meaning 'pure and true', or halal, prepared according to traditional Islamic regulations. But who can tell? Last year angry Muslims besieged a halal bakery in Xining, the capital of Qinghai province, after pork sausages were found in the shop’s delivery van. There have been several scandals in recent years involving rat meat or pork being sold as lamb. These have spread Muslim mistrust of domestically produced halal products.",
+      created_at: 2020-06-18T20:08:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/954677/pexels-photo-954677.jpeg?w=700&h=700'
+    },
+    {
+      article_id: 34,
+      title: 'The Notorious MSG’s Unlikely Formula For Success',
+      topic: 'cooking',
+      author: 'grumpy19',
+      body: "The 'umami' craze has turned a much-maligned and misunderstood food additive into an object of obsession for the world’s most innovative chefs. But secret ingredient monosodium glutamate’s biggest secret may be that there was never anything wrong with it at all.",
+      created_at: 2020-11-22T11:13:00.000Z,
+      votes: 0,
+      article_img_url: 'https://images.pexels.com/photos/2403392/pexels-photo-2403392.jpeg?w=700&h=700'
+    }
+  ],
+  fields: [
+    Field {
+      name: 'article_id',
+      tableID: 18487,
+      columnID: 1,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'title',
+      tableID: 18487,
+      columnID: 2,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'topic',
+      tableID: 18487,
+      columnID: 3,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'author',
+      tableID: 18487,
+      columnID: 4,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'body',
+      tableID: 18487,
+      columnID: 5,
+      dataTypeID: 25,
+      dataTypeSize: -1,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'created_at',
+      tableID: 18487,
+      columnID: 6,
+      dataTypeID: 1114,
+      dataTypeSize: 8,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'votes',
+      tableID: 18487,
+      columnID: 7,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'article_img_url',
+      tableID: 18487,
+      columnID: 8,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    }
+  ],
+  _parsers: [
+    [Function: parseInteger],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: parseDate],
+    [Function: parseInteger],
+    [Function: noParse]
+  ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: {
+    article_id: null,
+    title: null,
+    topic: null,
+    author: null,
+    body: null,
+    created_at: null,
+    votes: null,
+    article_img_url: null
+  }
+}
+f: Result {
+  command: 'SELECT',
+  rowCount: 100,
+  oid: null,
+  rows: [
+    {
+      comment_id: 7,
+      article_id: 17,
+      votes: 12,
+      body: 'Facilis corporis animi et non non minus nisi. Magnam et sequi dolorum fugiat ab assumenda.',
+      author: 'tickle122',
+      created_at: 2020-04-08T22:10:00.000Z
+    },
+    {
+      comment_id: 12,
+      article_id: 11,
+      votes: 15,
+      body: 'Maiores sed dolor. Consequatur quasi itaque culpa. Tempora ut autem est ad est voluptatem officiis. Ut sequi quaerat qui nam sunt.',
+      author: 'happyamy2016',
+      created_at: 2020-06-19T05:00:00.000Z
+    },
+    {
+      comment_id: 15,
+      article_id: 13,
+      votes: 12,
+      body: 'Voluptas enim dolores minima repellendus corporis mollitia omnis. Consectetur vitae quaerat possimus repellendus. Cumque maxime nisi itaque aliquid vel non non.',
+      author: 'jessjelly',
+      created_at: 2020-01-03T13:22:00.000Z
+    },
+    {
+      comment_id: 24,
+      article_id: 31,
+      votes: 16,
+      body: 'Quisquam perferendis est doloribus quidem a a. Quam quia ratione rerum facilis rerum est quo aut. Doloribus odio non aut tenetur et qui. Maiores vitae qui illo nisi illum. Accusamus consequatur ducimus vero non nobis alias ratione et aut.',
+      author: 'weegembump',
+      created_at: 2020-01-08T11:14:00.000Z
+    },
+    {
+      comment_id: 25,
+      article_id: 20,
+      votes: 20,
+      body: 'Ea et molestiae error. Esse harum facilis vitae numquam. Minus id eaque. Dolores nulla ipsam animi sapiente perspiciatis qui possimus.',
+      author: 'grumpy19',
+      created_at: 2020-08-20T06:19:00.000Z
+    },
+    {
+      comment_id: 27,
+      article_id: 31,
+      votes: 12,
+      body: 'Dolorem aspernatur labore reiciendis. Similique consequuntur voluptatem illum voluptate illo voluptas et nihil rem. Deserunt et totam tenetur quod. Maxime atque dolorem velit ut sit assumenda. Suscipit tenetur nemo ut ea eos et molestiae quisquam. Architecto asperiores esse.',
+      author: 'happyamy2016',
+      created_at: 2020-05-19T00:14:00.000Z
+    },
+    {
+      comment_id: 30,
+      article_id: 15,
+      votes: 14,
+      body: 'Et et esse magni qui minus quia adipisci dignissimos. Rerum ab sit voluptatum sequi aspernatur et.',
+      author: 'jessjelly',
+      created_at: 2020-08-25T22:10:00.000Z
+    },
+    {
+      comment_id: 31,
+      article_id: 1,
+      votes: 11,
+      body: 'Sit sequi odio suscipit. Iure quisquam qui alias distinctio eos officia enim aut sit. Corrupti ut praesentium ut iste earum itaque qui. Dolores in ab rerum consequuntur. Id ab aliquid autem dolore.',
+      author: 'weegembump',
+      created_at: 2020-09-26T16:16:00.000Z
+    },
+    {
+      comment_id: 32,
+      article_id: 26,
+      votes: 16,
+      body: 'Occaecati distinctio et maiores atque. Rerum aut vel iste beatae mollitia commodi. Cumque quia illum. Hic rerum sed.',
+      author: 'happyamy2016',
+      created_at: 2020-01-02T14:18:00.000Z
+    },
+    {
+      comment_id: 34,
+      article_id: 27,
+      votes: 13,
+      body: 'Omnis dolores sit. Suscipit dolore quia quia quia qui sunt error. Velit dolores eum cupiditate officiis minima quaerat. Fugiat occaecati magnam distinctio. Ut quia maxime adipisci dolorem qui nesciunt et voluptas.',
+      author: 'jessjelly',
+      created_at: 2020-11-08T21:14:00.000Z
+    },
+    {
+      comment_id: 132,
+      article_id: 7,
+      votes: 19,
+      body: 'Nihil neque maiores voluptatem sit. Culpa incidunt ut quo id qui provident reprehenderit necessitatibus.',
+      author: 'cooljmessy',
+      created_at: 2020-06-11T09:05:00.000Z
+    },
+    {
+      comment_id: 36,
+      article_id: 28,
+      votes: 17,
+      body: 'Debitis exercitationem numquam unde quo illo. Iste rerum rerum non accusantium voluptatibus adipisci expedita expedita adipisci. Minima quae velit et ea eveniet. Vero quis itaque. Aliquid facilis dolores consequatur ea amet magni aliquid.',
+      author: 'jessjelly',
+      created_at: 2020-05-26T18:06:00.000Z
+    },
+    {
+      comment_id: 37,
+      article_id: 23,
+      votes: 12,
+      body: 'Ut odit ad repudiandae laudantium facilis pariatur aliquid. Pariatur quidem voluptatibus recusandae in consequatur beatae sint. Aut error ratione culpa ipsam autem saepe vel sit enim. Adipisci voluptas sit sed perferendis ipsum molestiae. Sit perferendis veritatis illo et facilis eos libero error. Repellendus ea dolores deserunt inventore.',
+      author: 'tickle122',
+      created_at: 2020-09-18T14:13:00.000Z
+    },
+    {
+      comment_id: 39,
+      article_id: 31,
+      votes: 16,
+      body: 'Et veniam blanditiis fuga rem rem officiis debitis rerum. Est repudiandae tempora autem harum omnis et. Et consectetur sed assumenda asperiores amet quo eaque.',
+      author: 'grumpy19',
+      created_at: 2020-07-21T00:04:00.000Z
+    },
+    {
+      comment_id: 42,
+      article_id: 31,
+      votes: 16,
+      body: 'Harum odit sed doloremque eos voluptates vero ipsa odio eos. Velit et voluptatum accusantium. Eligendi deserunt sunt optio est hic nisi reprehenderit. Quasi et delectus facere modi.',
+      author: 'jessjelly',
+      created_at: 2020-02-12T08:26:00.000Z
+    },
+    {
+      comment_id: 48,
+      article_id: 34,
+      votes: 12,
+      body: 'Eaque fugiat est veniam ex praesentium et saepe molestias non. Est dolore et sint consequuntur.',
+      author: 'jessjelly',
+      created_at: 2020-03-08T20:02:00.000Z
+    },
+    {
+      comment_id: 49,
+      article_id: 31,
+      votes: 13,
+      body: 'Omnis dolor rerum culpa est ducimus totam voluptatibus id. Consequuntur vel cupiditate asperiores. Eos non molestiae accusamus esse excepturi animi vel animi.',
+      author: 'cooljmessy',
+      created_at: 2020-11-05T18:26:00.000Z
+    },
+    {
+      comment_id: 58,
+      article_id: 16,
+      votes: 12,
+      body: 'Dicta et doloremque rerum quod dolorem mollitia exercitationem quia. Quas quis quam recusandae occaecati sit voluptas. Et ut voluptatibus est eos. Placeat consectetur non nisi dolores ea non unde sit aperiam.',
+      author: 'jessjelly',
+      created_at: 2020-04-01T10:07:00.000Z
+    },
+    {
+      comment_id: 60,
+      article_id: 7,
+      votes: 19,
+      body: 'Aut optio perferendis praesentium fugiat. Vel similique non eveniet. Repellat molestiae ipsum voluptates.',
+      author: 'tickle122',
+      created_at: 2020-10-07T03:19:00.000Z
+    },
+    {
+      comment_id: 61,
+      article_id: 31,
+      votes: 13,
+      body: 'Quos deserunt ut doloremque animi. Error ipsum assumenda aliquam tempore est et suscipit eveniet necessitatibus. Sequi illo dolor quia incidunt voluptates sint dolore. Aut impedit dolores.',
+      author: 'cooljmessy',
+      created_at: 2020-03-07T16:04:00.000Z
+    },
+    {
+      comment_id: 66,
+      article_id: 27,
+      votes: 15,
+      body: 'Aperiam similique recusandae et rerum aut unde sed. Fuga voluptatem illum aut impedit excepturi. Et quaerat minima in veniam in maxime nam quia. Fugit nostrum ipsa ipsa est sunt quidem nostrum sit pariatur. Voluptas aspernatur ex.',
+      author: 'weegembump',
+      created_at: 2020-01-06T17:03:00.000Z
+    },
+    {
+      comment_id: 73,
+      article_id: 4,
+      votes: 16,
+      body: 'Fugiat molestiae iure et qui consequatur expedita quia. Est sed repellat nesciunt nulla sit in dolor laudantium. Totam vero et quam. In numquam magnam voluptas itaque. Quisquam vel vitae doloribus vel id laboriosam quibusdam.',
+      author: 'grumpy19',
+      created_at: 2020-01-24T07:01:00.000Z
+    },
+    {
+      comment_id: 81,
+      article_id: 7,
+      votes: 12,
+      body: 'Incidunt perferendis et eum. Odit aut eaque. Repudiandae et quia impedit quisquam dolore fugit. Magnam non magni qui molestias dolore sed facere blanditiis. Qui doloribus autem dolorum dolor aliquam. Tempora cum officia tempore.',
+      author: 'weegembump',
+      created_at: 2020-07-25T23:10:00.000Z
+    },
+    {
+      comment_id: 86,
+      article_id: 1,
+      votes: 14,
+      body: 'Et explicabo dignissimos officia dolore rerum aliquam corrupti. Culpa corporis earum et earum officia a est atque at. Quidem quo recusandae delectus autem possimus blanditiis optio. Sed culpa culpa. Exercitationem nemo aspernatur alias ut qui.',
+      author: 'tickle122',
+      created_at: 2020-10-04T01:03:00.000Z
+    },
+    {
+      comment_id: 95,
+      article_id: 21,
+      votes: 11,
+      body: 'Praesentium pariatur a nisi. Minima eius est saepe aut.',
+      author: 'grumpy19',
+      created_at: 2020-01-22T17:04:00.000Z
+    },
+    {
+      comment_id: 96,
+      article_id: 23,
+      votes: 11,
+      body: 'Eos exercitationem dolorem autem autem nesciunt voluptas molestiae quas. Ut id qui. Quis quia consequatur veritatis magnam autem. Corrupti corporis illo in in est aperiam.',
+      author: 'weegembump',
+      created_at: 2020-09-07T08:22:00.000Z
+    },
+    {
+      comment_id: 97,
+      article_id: 35,
+      votes: 19,
+      body: 'Enim sunt nam rerum quidem. Quod quia aliquam numquam et laboriosam doloribus iusto et. Numquam quae quis hic maiores. Sed quos et dolore esse cumque consequatur blanditiis placeat omnis. Omnis qui magni explicabo.',
+      author: 'weegembump',
+      created_at: 2020-02-20T07:13:00.000Z
+    },
+    {
+      comment_id: 99,
+      article_id: 19,
+      votes: 17,
+      body: 'Reiciendis enim soluta a sed cumque dolor quia quod sint. Laborum tempore est et quisquam dolore. Qui voluptas consequatur cumque neque et laborum unde sed. Impedit et consequatur tempore dignissimos earum distinctio cupiditate.',
+      author: 'happyamy2016',
+      created_at: 2020-09-18T18:05:00.000Z
+    },
+    {
+      comment_id: 264,
+      article_id: 19,
+      votes: 17,
+      body: 'Modi praesentium consequuntur nobis. Velit tempore consequuntur necessitatibus. Ab cumque nihil quae. Voluptas quis qui. Qui et ut.',
+      author: 'cooljmessy',
+      created_at: 2020-06-12T04:20:00.000Z
+    },
+    {
+      comment_id: 107,
+      article_id: 29,
+      votes: 12,
+      body: 'Enim ea consectetur soluta. Voluptatem est inventore cumque quo quia itaque. Labore vel odit accusantium. Error molestias iusto nostrum enim mollitia eius sequi ea.',
+      author: 'jessjelly',
+      created_at: 2020-04-01T01:11:00.000Z
+    },
+    {
+      comment_id: 110,
+      article_id: 8,
+      votes: 16,
+      body: 'Rerum error nemo unde recusandae occaecati. Consectetur alias accusamus architecto dolores quo illum illum.',
+      author: 'weegembump',
+      created_at: 2020-02-16T13:08:00.000Z
+    },
+    {
+      comment_id: 112,
+      article_id: 3,
+      votes: 11,
+      body: 'Voluptatem ipsam doloremque voluptate debitis voluptas nam non delectus rem. Et dicta assumenda dignissimos sed ea. Odit perspiciatis dicta consequatur aut facere in. Accusamus qui laudantium tenetur reprehenderit sed et velit iusto. Illo nihil voluptas rerum.',
+      author: 'grumpy19',
+      created_at: 2020-08-06T11:04:00.000Z
+    },
+    {
+      comment_id: 115,
+      article_id: 33,
+      votes: 12,
+      body: 'Neque dolor sint illum id consequuntur debitis qui nam eum. Nam adipisci similique consequatur officiis. Totam qui enim at iste dolorem ullam. Tenetur laudantium sed facilis aspernatur occaecati. Provident rerum quia consectetur et. Molestiae eligendi commodi.',
+      author: 'happyamy2016',
+      created_at: 2020-01-16T09:21:00.000Z
+    },
+    {
+      comment_id: 119,
+      article_id: 14,
+      votes: 20,
+      body: 'Rerum asperiores et aut illum iste. Sunt pariatur voluptate at quas nostrum.',
+      author: 'grumpy19',
+      created_at: 2020-01-24T20:11:00.000Z
+    },
+    {
+      comment_id: 120,
+      article_id: 18,
+      votes: 18,
+      body: 'Praesentium asperiores omnis porro facilis dignissimos sint exercitationem fugit. Error voluptas soluta veniam dicta amet iste. Deleniti assumenda id exercitationem accusantium. Ut sed eum est.',
+      author: 'cooljmessy',
+      created_at: 2020-02-22T14:12:00.000Z
+    },
+    {
+      comment_id: 122,
+      article_id: 10,
+      votes: 19,
+      body: 'Rerum iusto nisi impedit sit odio. Aperiam est et eum sit qui sunt expedita quaerat distinctio. Nulla neque sint reprehenderit delectus. Omnis est reprehenderit. Ab non magnam. Reiciendis quo eveniet voluptates possimus ipsum repellendus dolores.',
+      author: 'cooljmessy',
+      created_at: 2020-10-04T23:06:00.000Z
+    },
+    {
+      comment_id: 123,
+      article_id: 21,
+      votes: 19,
+      body: 'Nisi itaque ipsum qui minus occaecati quia impedit consequatur. Et unde assumenda eos eum ducimus perferendis.',
+      author: 'cooljmessy',
+      created_at: 2020-07-25T19:24:00.000Z
+    },
+    {
+      comment_id: 127,
+      article_id: 30,
+      votes: 19,
+      body: 'Fuga sit accusantium sunt aliquam voluptates omnis facilis adipisci ad. Quaerat nostrum omnis officiis cumque placeat dolorem soluta. Quas pariatur ipsa ea quae totam sit porro veniam. Assumenda et id velit inventore dolores asperiores voluptas quo qui.',
+      author: 'jessjelly',
+      created_at: 2020-09-05T19:21:00.000Z
+    },
+    {
+      comment_id: 130,
+      article_id: 34,
+      votes: 18,
+      body: 'Ad odio a assumenda ad ut. Quidem modi in enim tempora labore. Culpa reiciendis nulla est maxime. Magni rem voluptatem sunt. Distinctio reiciendis consequatur aut eaque natus cum. Dicta rerum eum nisi.',
+      author: 'jessjelly',
+      created_at: 2020-01-26T18:23:00.000Z
+    },
+    {
+      comment_id: 131,
+      article_id: 36,
+      votes: 18,
+      body: 'Atque consequuntur eligendi culpa cumque dolor et qui sapiente et. Quia placeat sed blanditiis consequatur velit possimus. Quidem fuga odio enim error voluptates vitae. Laboriosam qui consequatur sit illo minima ducimus reprehenderit necessitatibus impedit. Explicabo ducimus maxime.',
+      author: 'cooljmessy',
+      created_at: 2020-08-11T06:21:00.000Z
+    },
+    {
+      comment_id: 133,
+      article_id: 27,
+      votes: 15,
+      body: 'Aut sed sunt odio quas quas sequi odit excepturi. Eius nisi modi quo aliquid est vero. Iure quis nihil est dolore repellendus ratione dolores eum nulla. Molestiae similique veritatis voluptas quia illum et repudiandae a corrupti. Quod optio quos. Tempore sequi quam.',
+      author: 'weegembump',
+      created_at: 2020-09-14T09:01:00.000Z
+    },
+    {
+      comment_id: 136,
+      article_id: 22,
+      votes: 18,
+      body: 'Eveniet ratione rerum. Corrupti vitae excepturi sit repudiandae iste dolor consectetur sit eum.',
+      author: 'weegembump',
+      created_at: 2020-06-22T20:23:00.000Z
+    },
+    {
+      comment_id: 139,
+      article_id: 32,
+      votes: 19,
+      body: 'Blanditiis reiciendis eos est voluptas veniam. Vero voluptatem ut. Et ipsum laudantium modi consectetur ipsa. Itaque ut asperiores provident rem earum necessitatibus quaerat. Harum ipsam ex et accusantium aut. Tempora quia voluptatem omnis odio.',
+      author: 'cooljmessy',
+      created_at: 2020-08-20T10:03:00.000Z
+    },
+    {
+      comment_id: 144,
+      article_id: 5,
+      votes: 19,
+      body: 'Placeat voluptatum consequatur ducimus et eum molestiae impedit eveniet. Recusandae rerum voluptas quia mollitia quam velit iusto. Eum eos similique minima necessitatibus nemo. Iure deleniti omnis enim animi iste delectus et consequuntur.',
+      author: 'grumpy19',
+      created_at: 2020-11-23T17:00:00.000Z
+    },
+    {
+      comment_id: 151,
+      article_id: 34,
+      votes: 14,
+      body: 'Fuga hic sed. Minus expedita eos aut. Enim dolores iure consequatur et consequatur dolor autem. Itaque consequatur quia. Ullam officia cumque nihil officiis. Earum error iure sed non earum.',
+      author: 'jessjelly',
+      created_at: 2020-08-31T09:09:00.000Z
+    },
+    {
+      comment_id: 152,
+      article_id: 2,
+      votes: 18,
+      body: 'Animi id fuga culpa voluptates sint qui. Nostrum deleniti optio quo quas eveniet excepturi voluptates voluptatem totam. Provident dolores nesciunt dignissimos quisquam laboriosam iusto aut recusandae est.',
+      author: 'grumpy19',
+      created_at: 2020-09-10T02:16:00.000Z
+    },
+    {
+      comment_id: 156,
+      article_id: 27,
+      votes: 18,
+      body: 'Error nesciunt et aut ipsam. Dolorum doloribus pariatur.',
+      author: 'happyamy2016',
+      created_at: 2020-07-02T14:01:00.000Z
+    },
+    {
+      comment_id: 161,
+      article_id: 11,
+      votes: 18,
+      body: 'Repellendus eos consequatur atque autem voluptatem et neque facere quas. Illum quaerat numquam labore dolorem harum dolores veritatis. Animi ex dolorum amet. Atque quia quasi labore sed molestiae.',
+      author: 'weegembump',
+      created_at: 2020-04-01T22:01:00.000Z
+    },
+    {
+      comment_id: 162,
+      article_id: 2,
+      votes: 14,
+      body: 'Et suscipit maxime sit sunt consequuntur consequatur fugiat molestias. Et quis enim vero.',
+      author: 'grumpy19',
+      created_at: 2020-10-03T18:22:00.000Z
+    },
+    {
+      comment_id: 163,
+      article_id: 13,
+      votes: 11,
+      body: 'Beatae labore et voluptatem aut iure. Labore cum tempore eaque cum. Doloribus omnis neque nihil odio ipsum dolore voluptates.',
+      author: 'grumpy19',
+      created_at: 2020-04-23T01:10:00.000Z
+    },
+    {
+      comment_id: 164,
+      article_id: 24,
+      votes: 12,
+      body: 'Qui aut nihil temporibus enim. Consequatur officiis quia. Sit vero eum.',
+      author: 'cooljmessy',
+      created_at: 2020-06-15T00:01:00.000Z
+    },
+    {
+      comment_id: 165,
+      article_id: 27,
+      votes: 19,
+      body: 'Eaque vel unde ab voluptates sint. Doloribus in aut eaque sed laboriosam consequuntur voluptatem molestiae. Sed quibusdam similique aut consequatur reprehenderit omnis. Quasi et commodi nihil aut odio harum.',
+      author: 'happyamy2016',
+      created_at: 2020-11-18T07:03:00.000Z
+    },
+    {
+      comment_id: 166,
+      article_id: 23,
+      votes: 12,
+      body: 'Dolores facere consequatur. Voluptatem sed debitis esse voluptatem error debitis laborum. Provident provident et et laboriosam qui sunt et temporibus ut. Totam ipsa dicta officia sit et itaque. Enim sit debitis inventore reprehenderit at et ducimus. Culpa qui et odio exercitationem.',
+      author: 'cooljmessy',
+      created_at: 2020-08-05T07:03:00.000Z
+    },
+    {
+      comment_id: 167,
+      article_id: 3,
+      votes: 19,
+      body: 'Deleniti itaque et est unde autem. Labore illo commodi quaerat natus fugiat adipisci. Adipisci unde recusandae aliquam suscipit ipsum.',
+      author: 'grumpy19',
+      created_at: 2020-02-05T09:16:00.000Z
+    },
+    {
+      comment_id: 170,
+      article_id: 17,
+      votes: 13,
+      body: 'Atque voluptas quaerat odio quis. Maxime eligendi autem a consectetur dolores ea necessitatibus consequatur molestias. Autem voluptatem soluta ipsa et qui iure neque est. Qui architecto reiciendis id repudiandae omnis aspernatur veniam est nobis. Ducimus eveniet voluptatum enim et fuga officia omnis consectetur. Recusandae et sint quia dolor voluptatem sit autem id.',
+      author: 'weegembump',
+      created_at: 2020-07-14T18:04:00.000Z
+    },
+    {
+      comment_id: 172,
+      article_id: 16,
+      votes: 16,
+      body: 'Repudiandae eos eligendi beatae aliquid incidunt temporibus sunt iste dolorem. Dolor iusto ratione quo quia. Deserunt architecto accusamus. Tempore commodi similique rerum vero quia. Ab sit asperiores assumenda est.',
+      author: 'weegembump',
+      created_at: 2020-08-15T04:26:00.000Z
+    },
+    {
+      comment_id: 173,
+      article_id: 15,
+      votes: 16,
+      body: 'Laudantium non corrupti maxime aut ea ullam incidunt autem aperiam. Dicta adipisci delectus officia ea earum accusamus et et. Molestiae sed quidem nulla soluta dolor ipsum. Debitis nam laudantium provident occaecati deserunt cumque.',
+      author: 'tickle122',
+      created_at: 2020-06-12T11:18:00.000Z
+    },
+    {
+      comment_id: 183,
+      article_id: 12,
+      votes: 15,
+      body: 'Eaque et officia maxime. Iusto provident a vitae. In dolorem numquam. Pariatur est laudantium laborum nostrum architecto assumenda ea maxime. Quia perferendis qui ducimus saepe et sunt cum dolore amet. Quibusdam aliquam nam illum consectetur aut porro.',
+      author: 'cooljmessy',
+      created_at: 2020-11-15T09:14:00.000Z
+    },
+    {
+      comment_id: 185,
+      article_id: 18,
+      votes: 14,
+      body: 'Impedit iure ut est qui et qui sed. Nobis sint voluptatem asperiores. Ad sequi repellendus.',
+      author: 'jessjelly',
+      created_at: 2020-02-02T15:13:00.000Z
+    },
+    {
+      comment_id: 186,
+      article_id: 21,
+      votes: 19,
+      body: 'Nisi culpa molestiae est molestias animi minus. Labore aut doloribus placeat et qui explicabo odio.',
+      author: 'tickle122',
+      created_at: 2020-09-19T16:23:00.000Z
+    },
+    {
+      comment_id: 187,
+      article_id: 4,
+      votes: 14,
+      body: 'Vitae quo nobis illum aut vel iure. Ut non distinctio quia soluta odit quasi ut mollitia accusamus. Eum perferendis neque quos dignissimos expedita totam fugit autem. Quis exercitationem dolor molestiae ullam asperiores impedit architecto dolor.',
+      author: 'grumpy19',
+      created_at: 2020-06-23T01:00:00.000Z
+    },
+    {
+      comment_id: 188,
+      article_id: 28,
+      votes: 19,
+      body: 'Qui at et qui pariatur saepe ea libero. Voluptate voluptatem qui est qui quasi et. Consequatur illo voluptatem ea autem vel vel. Perferendis iure ab voluptate asperiores odio odit dolores. Rem et nulla dolorem et dignissimos culpa. Voluptatibus nihil consequatur aspernatur debitis velit quaerat sequi praesentium.',
+      author: 'cooljmessy',
+      created_at: 2020-08-03T13:07:00.000Z
+    },
+    {
+      comment_id: 189,
+      article_id: 16,
+      votes: 19,
+      body: 'Architecto nesciunt enim totam deleniti nobis enim eum consequatur. Ut nostrum voluptates excepturi minus ipsam dolorem nostrum.',
+      author: 'happyamy2016',
+      created_at: 2020-04-05T06:00:00.000Z
+    },
+    {
+      comment_id: 190,
+      article_id: 20,
+      votes: 12,
+      body: 'Dolorum fugiat temporibus quia quisquam. Et id minima.',
+      author: 'cooljmessy',
+      created_at: 2020-08-05T21:04:00.000Z
+    },
+    {
+      comment_id: 191,
+      article_id: 2,
+      votes: 12,
+      body: 'Ex beatae harum qui. Et minima qui. Molestiae quod commodi tenetur corporis id necessitatibus eum nobis. Ut dolorem eveniet. Ex dolor qui. Officia reprehenderit ducimus iure placeat.',
+      author: 'weegembump',
+      created_at: 2020-08-05T12:17:00.000Z
+    },
+    {
+      comment_id: 194,
+      article_id: 15,
+      votes: 11,
+      body: 'Sit dolore et et voluptatem consequatur. Nostrum quae accusamus repellendus quae esse eligendi quaerat incidunt omnis.',
+      author: 'cooljmessy',
+      created_at: 2020-03-20T06:06:00.000Z
+    },
+    {
+      comment_id: 195,
+      article_id: 20,
+      votes: 14,
+      body: 'Voluptas in neque quasi. Rem esse odio deserunt minima voluptatem laboriosam consequatur aut aliquam. Rerum ipsa et voluptas velit eveniet doloribus.',
+      author: 'weegembump',
+      created_at: 2020-08-03T00:17:00.000Z
+    },
+    {
+      comment_id: 197,
+      article_id: 18,
+      votes: 11,
+      body: 'Autem similique commodi et vel autem minima quos quam. Animi et dignissimos recusandae repellat officia excepturi sunt. Occaecati vel excepturi qui voluptatem et illo hic. Voluptas itaque et. Hic fugiat tempore soluta sequi nisi perspiciatis rerum perspiciatis. Corrupti accusantium ullam corporis facilis ea omnis enim.',
+      author: 'tickle122',
+      created_at: 2020-08-21T07:13:00.000Z
+    },
+    {
+      comment_id: 199,
+      article_id: 10,
+      votes: 12,
+      body: 'Autem magnam sequi quidem inventore dolorem sed dicta qui quis. Voluptatem sit pariatur esse similique nam corporis provident. Quo quam ducimus repudiandae voluptas. Officia ducimus quo praesentium ducimus est nesciunt molestias sequi.',
+      author: 'jessjelly',
+      created_at: 2020-06-03T00:26:00.000Z
+    },
+    {
+      comment_id: 208,
+      article_id: 16,
+      votes: 11,
+      body: 'Sunt quos sit suscipit est veritatis molestias accusamus. Animi voluptatum et aliquam dolorum et molestiae culpa sed qui. Sapiente rerum tempore amet quia nesciunt.',
+      author: 'jessjelly',
+      created_at: 2020-01-11T08:00:00.000Z
+    },
+    {
+      comment_id: 210,
+      article_id: 17,
+      votes: 15,
+      body: 'Et laboriosam aut. Ut natus possimus quia rerum autem culpa et officiis. Accusantium ut et et laudantium aspernatur inventore. Praesentium molestias odio.',
+      author: 'grumpy19',
+      created_at: 2020-08-16T19:03:00.000Z
+    },
+    {
+      comment_id: 213,
+      article_id: 7,
+      votes: 14,
+      body: 'Voluptas accusantium eius earum aliquid. Earum et rerum. Expedita dolores ut autem fuga id accusamus et.',
+      author: 'weegembump',
+      created_at: 2020-11-21T01:09:00.000Z
+    },
+    {
+      comment_id: 217,
+      article_id: 19,
+      votes: 19,
+      body: 'Ratione ea amet ut minus repellendus. Sunt ut qui sit commodi et nihil. Minima incidunt quibusdam rem id voluptas. Voluptatem rem omnis voluptatem facilis ipsum libero sunt. Aperiam aut quia.',
+      author: 'happyamy2016',
+      created_at: 2020-11-12T18:20:00.000Z
+    },
+    {
+      comment_id: 224,
+      article_id: 6,
+      votes: 18,
+      body: 'Adipisci ut dignissimos doloribus iure quis vel aut. Neque voluptatem occaecati qui autem officiis. Aperiam incidunt qui assumenda reprehenderit maxime repudiandae voluptas deleniti.',
+      author: 'jessjelly',
+      created_at: 2020-11-01T04:25:00.000Z
+    },
+    {
+      comment_id: 225,
+      article_id: 17,
+      votes: 12,
+      body: 'Laborum ipsa molestiae dolore et ut suscipit. Quia odio quod harum consequatur. Ut illum natus saepe. Odit impedit non ipsa ex. Eveniet sapiente dolores et dolorem est.',
+      author: 'cooljmessy',
+      created_at: 2020-05-17T23:24:00.000Z
+    },
+    {
+      comment_id: 228,
+      article_id: 23,
+      votes: 13,
+      body: 'Omnis in magni temporibus dolor necessitatibus est reiciendis. Voluptate suscipit cumque earum. Quaerat fuga voluptates qui ut sed asperiores expedita quasi. Et corporis officia dignissimos maiores fugit deserunt quos qui qui. Explicabo eum sint dolorem quas dolorem doloremque quasi in vel.',
+      author: 'jessjelly',
+      created_at: 2020-03-08T22:12:00.000Z
+    },
+    {
+      comment_id: 230,
+      article_id: 27,
+      votes: 14,
+      body: 'Perferendis perspiciatis voluptates quia adipisci sequi voluptatem doloremque. Dignissimos quo quos. Placeat ipsum iste minima laudantium possimus voluptas in.',
+      author: 'cooljmessy',
+      created_at: 2020-06-15T21:14:00.000Z
+    },
+    {
+      comment_id: 231,
+      article_id: 3,
+      votes: 11,
+      body: 'Consequatur inventore voluptatum hic qui magnam nulla rerum. Beatae sint sed qui iure in est. Quo quibusdam molestias autem animi repellendus at et. Voluptates maxime recusandae. Repudiandae qui nesciunt.',
+      author: 'happyamy2016',
+      created_at: 2020-08-07T06:05:00.000Z
+    },
+    {
+      comment_id: 233,
+      article_id: 31,
+      votes: 19,
+      body: 'Optio earum praesentium expedita tempore atque ipsam qui. Optio aliquam consequuntur minus quasi repudiandae omnis tempore tenetur. Ratione non earum est voluptatem sint laboriosam est sint. Assumenda rerum rerum consectetur blanditiis aliquid magnam amet. Alias quod qui et. Voluptatem esse delectus dolor eligendi officia autem.',
+      author: 'jessjelly',
+      created_at: 2020-02-08T23:12:00.000Z
+    },
+    {
+      comment_id: 236,
+      article_id: 30,
+      votes: 16,
+      body: 'Velit ut aut quia saepe dicta. Omnis hic voluptates doloremque earum voluptatibus pariatur. Natus error commodi impedit ad enim aspernatur. Illo maxime laboriosam ipsam temporibus iusto quae laboriosam dolorem debitis.',
+      author: 'happyamy2016',
+      created_at: 2020-04-24T17:16:00.000Z
+    },
+    {
+      comment_id: 239,
+      article_id: 6,
+      votes: 20,
+      body: 'Alias quos temporibus. Non non facere hic eligendi totam placeat. Distinctio aliquid voluptates aut aperiam aut est inventore error tenetur. Totam et eos vel in quos asperiores vero cumque tempora. Eligendi nihil deleniti iusto laborum velit neque dolore.',
+      author: 'cooljmessy',
+      created_at: 2020-09-18T00:11:00.000Z
+    },
+    {
+      comment_id: 241,
+      article_id: 26,
+      votes: 14,
+      body: 'A aliquam aut voluptas eius. Ducimus omnis molestias eum veniam nostrum laborum. Sunt error praesentium eos.',
+      author: 'happyamy2016',
+      created_at: 2020-10-08T22:19:00.000Z
+    },
+    {
+      comment_id: 246,
+      article_id: 25,
+      votes: 20,
+      body: 'Nesciunt iusto sed illo explicabo. Molestias dolorem ut dignissimos est sint quia optio praesentium. Dignissimos non itaque. Hic necessitatibus minus modi laudantium iure voluptatibus. Et recusandae harum voluptates expedita deserunt deleniti et. Ratione minima ullam dignissimos aliquam.',
+      author: 'happyamy2016',
+      created_at: 2020-03-03T18:00:00.000Z
+    },
+    {
+      comment_id: 248,
+      article_id: 16,
+      votes: 15,
+      body: 'Quasi optio delectus eum aliquam numquam provident voluptatem eos numquam. Est iste quibusdam in. Qui architecto culpa tenetur modi.',
+      author: 'tickle122',
+      created_at: 2020-02-11T19:11:00.000Z
+    },
+    {
+      comment_id: 251,
+      article_id: 9,
+      votes: 11,
+      body: 'Velit excepturi placeat qui. Sed et sint molestias ut temporibus. Odit nulla rerum vitae ut omnis asperiores molestias odio. Dolorem pariatur molestiae rerum sunt enim assumenda mollitia dicta est.',
+      author: 'cooljmessy',
+      created_at: 2020-03-14T14:26:00.000Z
+    },
+    {
+      comment_id: 254,
+      article_id: 33,
+      votes: 16,
+      body: 'Cupiditate commodi delectus molestiae exercitationem iure eum error et. Et pariatur dolores assumenda explicabo ut ut rem. Magni molestiae veritatis illum.',
+      author: 'weegembump',
+      created_at: 2020-03-21T11:05:00.000Z
+    },
+    {
+      comment_id: 257,
+      article_id: 22,
+      votes: 16,
+      body: 'Non consequuntur est et fugit delectus id occaecati aut consequatur. Et totam qui. Vel tempore qui quam iusto adipisci voluptate repudiandae cum. Temporibus et illum.',
+      author: 'jessjelly',
+      created_at: 2020-10-09T06:17:00.000Z
+    },
+    {
+      comment_id: 262,
+      article_id: 25,
+      votes: 14,
+      body: 'Quia adipisci veritatis quia voluptate aperiam dolor. Consequatur ipsam doloremque. Et reiciendis et in ut necessitatibus et voluptatem. Et voluptatem ut. Officiis eos exercitationem sequi temporibus debitis nemo sit.',
+      author: 'grumpy19',
+      created_at: 2020-10-01T10:10:00.000Z
+    },
+    {
+      comment_id: 263,
+      article_id: 26,
+      votes: 12,
+      body: 'Occaecati ut officiis temporibus et atque exercitationem quae velit est. Ut maiores illum quo eos et veritatis quisquam sunt voluptatibus. Aut eos vel. Explicabo repellendus culpa occaecati beatae odio magnam ex. Dolor tempore consequatur.',
+      author: 'jessjelly',
+      created_at: 2020-01-18T08:06:00.000Z
+    },
+    {
+      comment_id: 267,
+      article_id: 21,
+      votes: 18,
+      body: 'Rerum culpa facere minus exercitationem unde sit facilis. Ex sint neque et animi quia error sequi quibusdam tempora. Tempora temporibus et illo dolore praesentium. Non perspiciatis sit enim magnam nisi.',
+      author: 'weegembump',
+      created_at: 2020-07-31T20:17:00.000Z
+    },
+    {
+      comment_id: 272,
+      article_id: 33,
+      votes: 17,
+      body: 'Distinctio excepturi laboriosam eos aperiam quis amet eum animi minima. Officiis in quia. Est consequatur optio atque nostrum iusto impedit harum quod asperiores.',
+      author: 'tickle122',
+      created_at: 2020-10-21T05:05:00.000Z
+    },
+    {
+      comment_id: 276,
+      article_id: 12,
+      votes: 20,
+      body: 'Voluptatem unde dolor id et. Voluptas vitae soluta. Rerum aperiam illum dolores ducimus optio et possimus dolorum quo.',
+      author: 'weegembump',
+      created_at: 2020-10-20T00:11:00.000Z
+    },
+    {
+      comment_id: 278,
+      article_id: 23,
+      votes: 19,
+      body: 'Reiciendis quo animi qui qui. Modi ipsam quas. Illo nihil quidem dolorem sapiente libero eum. Ea et molestiae aut magnam quo et rerum fugit eius. Porro dolorem id quasi. Illo asperiores qui sint.',
+      author: 'happyamy2016',
+      created_at: 2020-10-03T03:01:00.000Z
+    },
+    {
+      comment_id: 279,
+      article_id: 24,
+      votes: 12,
+      body: 'Dolor architecto quaerat rerum dolore qui et sunt assumenda quas. Inventore vero eius odio ipsa repudiandae atque dignissimos. Consequuntur et praesentium qui ut soluta suscipit ut tempora. Ratione blanditiis aut molestiae molestiae ut. Corporis nam consequatur sapiente dicta quae repudiandae id ut sint. Reprehenderit omnis magnam.',
+      author: 'grumpy19',
+      created_at: 2020-09-01T22:05:00.000Z
+    },
+    {
+      comment_id: 281,
+      article_id: 7,
+      votes: 12,
+      body: 'Facilis magni odit doloribus et illo ea dignissimos voluptate. Sit officia repudiandae eius suscipit velit fuga qui esse. Necessitatibus minus omnis minus ab.',
+      author: 'happyamy2016',
+      created_at: 2020-03-12T07:05:00.000Z
+    },
+    {
+      comment_id: 286,
+      article_id: 1,
+      votes: 19,
+      body: 'Ut accusamus enim vel voluptate quae temporibus labore neque a. Reprehenderit iste est eos velit fugit vel quod velit.',
+      author: 'cooljmessy',
+      created_at: 2020-04-26T01:14:00.000Z
+    },
+    {
+      comment_id: 288,
+      article_id: 26,
+      votes: 17,
+      body: 'Maiores labore error debitis earum aliquid. Vel omnis a qui sint voluptatem aut. Sint ullam error velit.',
+      author: 'cooljmessy',
+      created_at: 2020-05-23T18:06:00.000Z
+    },
+    {
+      comment_id: 296,
+      article_id: 30,
+      votes: 19,
+      body: 'Ab impedit reprehenderit. Eligendi a asperiores. Vel ut modi inventore molestiae cum delectus et. Reiciendis excepturi eveniet.',
+      author: 'happyamy2016',
+      created_at: 2020-02-20T02:16:00.000Z
+    },
+    {
+      comment_id: 298,
+      article_id: 11,
+      votes: 13,
+      body: 'Et non quia sunt dolorem vero sint optio perspiciatis. Assumenda dolor est aut cum amet assumenda autem. Iusto earum vero animi nihil error non placeat.',
+      author: 'tickle122',
+      created_at: 2020-03-14T14:02:00.000Z
+    },
+    {
+      comment_id: 299,
+      article_id: 27,
+      votes: 14,
+      body: 'Sit vitae ut labore doloribus consequatur quam. Perferendis odit provident officia debitis laboriosam aut odio quo. Iusto aperiam dolorum ex commodi animi dignissimos. Qui sint cupiditate ut labore temporibus excepturi.',
+      author: 'grumpy19',
+      created_at: 2020-05-25T02:03:00.000Z
+    }
+  ],
+  fields: [
+    Field {
+      name: 'comment_id',
+      tableID: 18510,
+      columnID: 1,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'article_id',
+      tableID: 18510,
+      columnID: 2,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'votes',
+      tableID: 18510,
+      columnID: 3,
+      dataTypeID: 23,
+      dataTypeSize: 4,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'body',
+      tableID: 18510,
+      columnID: 4,
+      dataTypeID: 25,
+      dataTypeSize: -1,
+      dataTypeModifier: -1,
+      format: 'text'
+    },
+    Field {
+      name: 'author',
+      tableID: 18510,
+      columnID: 5,
+      dataTypeID: 1043,
+      dataTypeSize: -1,
+      dataTypeModifier: 1004,
+      format: 'text'
+    },
+    Field {
+      name: 'created_at',
+      tableID: 18510,
+      columnID: 6,
+      dataTypeID: 1114,
+      dataTypeSize: 8,
+      dataTypeModifier: -1,
+      format: 'text'
+    }
+  ],
+  _parsers: [
+    [Function: parseInteger],
+    [Function: parseInteger],
+    [Function: parseInteger],
+    [Function: noParse],
+    [Function: noParse],
+    [Function: parseDate]
+  ],
+  _types: TypeOverrides {
+    _types: {
+      getTypeParser: [Function: getTypeParser],
+      setTypeParser: [Function: setTypeParser],
+      arrayParser: [Object],
+      builtins: [Object]
+    },
+    text: {},
+    binary: {}
+  },
+  RowCtor: null,
+  rowAsArray: false,
+  _prebuiltEmptyResultObject: {
+    comment_id: null,
+    article_id: null,
+    votes: null,
+    body: null,
+    author: null,
+    created_at: null
+  }
+}
