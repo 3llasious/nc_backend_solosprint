@@ -56,6 +56,7 @@ describe("/api/articles/", () => {
 
     const { body } = sendRequest;
     const { articles } = body;
+    console.log(articles);
     //ASSERT
     articles.forEach((article) => {
       expect(typeof article.article_id).toBe("number");
@@ -123,6 +124,20 @@ describe("/api/articles/:id/comments", () => {
     });
 
     expect(comments).toBeSortedBy("created_at", { descending: true });
+
+    //Testing the shape of the object which allowed db values to change without breaking the tests
+  });
+  test("GET: responds with status 200 and a message when article has no comments", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles/10/comments")
+      .expect(200); //simulated sending a request and receiving a response with no comments
+
+    const { body } = sendRequest;
+    const { msg } = body;
+    //ASSERT
+    expect(msg).toBe("oops, nothing to see here yet! add a comment!");
 
     //Testing the shape of the object which allowed db values to change without breaking the tests
   });

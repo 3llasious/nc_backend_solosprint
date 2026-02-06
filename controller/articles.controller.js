@@ -40,7 +40,7 @@ exports.getCommentsForThisArticle = async (request, response, next) => {
     if (result.length === 0) {
       response
         .status(200)
-        .send({ msg: "oops, nothing here yet! add a comment!" });
+        .send({ msg: "oops, nothing to see here yet! add a comment!" });
     } else {
       response.status(200).send({ comments: result });
     }
@@ -69,7 +69,7 @@ exports.VoteOnThisArticle = async (request, response, next) => {
   const { body } = request; // { inc_votes: 1 }
   try {
     const result = await VoteOnThisArticleSL(id, body);
-    response.status(200).send({ article: result }); // temporary
+    response.status(200).send({ article: result });
   } catch (error) {
     next(error);
   }
