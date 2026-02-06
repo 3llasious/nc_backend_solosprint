@@ -82,7 +82,6 @@ const seed = async ({ topicData, userData, articleData, commentData }) => {
     "article_id", // the value reference
   );
 
-  console.log(lookupObj);
   const formattedComments = commentData.map((comment) => {
     return [
       lookupObj[comment.article_title], // <------- OH no! we need article id information but the comments data only has article_title

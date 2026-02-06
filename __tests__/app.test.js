@@ -36,7 +36,7 @@ describe("/api/topics/", () => {
     const sendRequest = await request(app).get("/api/topics").expect(200); //simulated sending a request and receiving a response
 
     const { body } = sendRequest;
-    console.log(body);
+
     const { topics } = body;
     //ASSERT
     topics.forEach((topic) => {
@@ -108,7 +108,7 @@ describe("/api/users/", () => {
     const sendRequest = await request(app).get("/api/users").expect(200); //simulated sending a request and receiving a response
 
     const { body } = sendRequest; //<-- this is the full key result
-    console.log("body", body);
+
     const { users } = body; //<--- this is trying to get rows that we labelled as users in controller
     //ASSERT
     users.forEach((user) => {

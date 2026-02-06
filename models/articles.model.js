@@ -31,7 +31,6 @@ exports.fetchThisArticle = async (id) => {
     [id],
   );
 
-  console.log(rows);
   return rows;
 };
 

@@ -13,8 +13,7 @@ exports.getAllArticles = async (request, response) => {
 
 exports.getThisArticle = async (request, response, next) => {
   const { id } = request.params;
-  console.log(request.params);
-  console.log(id);
+  //console.logged to see available params
 
   try {
     const resultarticle = await getThisArticleServiceLayer(id);
@@ -24,7 +23,7 @@ exports.getThisArticle = async (request, response, next) => {
     //sends off the response from the getThisArticle function to the app layer with status 200 stored on a key of article
   } catch (err) {
     // this block runs if the id doesn't exist it catches the error from the service layer
-    console.log(err);
+
     next(err);
     //this exists our current middleware chain and takes us to the error middleware chain in app.js
   }

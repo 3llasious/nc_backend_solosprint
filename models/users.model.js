@@ -6,7 +6,5 @@ exports.fetchAllUsers = async () => {
     "SELECT username, name, avatar_url FROM users",
   );
 
-  console.log(rows);
-
   return rows;
 };
