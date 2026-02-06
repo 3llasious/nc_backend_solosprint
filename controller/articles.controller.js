@@ -1,6 +1,10 @@
+const { request, response } = require("../app.js");
 const {
   getAllArticles: getAllArticlesServiceLayer,
   getThisArticle: getThisArticleServiceLayer,
+  getCommentsForThisArticle: getCommentsForThisArticleSL,
+  postCommentOnThisArticle: postCommentOnThisArticleSL,
+  VoteOnThisArticle: VoteOnThisArticleSL,
 } = require("../service/articles.service.js");
 
 exports.getAllArticles = async (request, response) => {
@@ -26,6 +30,48 @@ exports.getThisArticle = async (request, response, next) => {
 
     next(err);
     //this exists our current middleware chain and takes us to the error middleware chain in app.js
+  }
+};
+
+exports.getCommentsForThisArticle = async (request, response, next) => {
+  const { id } = request.params;
+  try {
+    const result = await getCommentsForThisArticleSL(id);
+    if (result.length === 0) {
+      response
+        .status(200)
+        .send({ msg: "oops, nothing here yet! add a comment!" });
+    } else {
+      response.status(200).send({ comments: result });
+    }
+  } catch (err) {
+    next(err);
+    //for invalid article id input
+  }
+};
+
+exports.postCommentOnThisArticle = async (request, response, next) => {
+  const { id } = request.params;
+  const { body } = request;
+
+  try {
+    const result = await postCommentOnThisArticleSL(id, body);
+
+    response.status(201).send({ comment: result });
+  } catch (err) {
+    next(err);
+  }
+};
+
+exports.VoteOnThisArticle = async (request, response, next) => {
+  const { id } = request.params;
+
+  const { body } = request; // { inc_votes: 1 }
+  try {
+    const result = await VoteOnThisArticleSL(id, body);
+    response.status(200).send({ article: result }); // temporary
+  } catch (error) {
+    next(error);
   }
 };
 

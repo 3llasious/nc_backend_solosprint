@@ -1,7 +1,12 @@
 const {
   fetchAllArticles,
   fetchThisArticle,
+  fetchThisCommentsSection,
+  fetchThisCommentOnThisArticle,
+  fetchTheVoteUpdatedArticle,
 } = require("../models/articles.model.js");
+
+const { DoesArticleExist } = require("../db/seeds/queries.js");
 
 const NotFoundError = require("../errors/NotFoundErrorClass.js");
 
@@ -22,4 +27,34 @@ exports.getThisArticle = async (id) => {
   }
 };
 
+exports.getCommentsForThisArticle = async (id) => {
+  const exists = await DoesArticleExist(id);
+  if (!exists) {
+    //check if it exists using the utils function
+    throw new NotFoundError("ID not found");
+  }
+
+  const comments = await fetchThisCommentsSection(id);
+  return comments;
+  //if article exists return comments else move on and catch error
+};
+
+exports.postCommentOnThisArticle = async (id, body) => {
+  try {
+    const comment = await fetchThisCommentOnThisArticle(id, body);
+    return comment[0];
+  } catch {
+    throw new NotFoundError("ID not found");
+  }
+  //the comment array with one value
+};
+
+exports.VoteOnThisArticle = async (id, body) => {
+  try {
+    const article = await fetchTheVoteUpdatedArticle(id, body);
+    return article[0];
+  } catch {
+    throw new NotFoundError("ID not found");
+  }
+};
 //exported to be used by our controller layer controller

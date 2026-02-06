@@ -28,4 +28,16 @@ const getUsers = async ({ topicData, userData, articleData, commentData }) => {
   console.log("f:", popularCommets);
 };
 
-module.exports = getUsers;
+const DoesArticleExist = async (id) => {
+  const exists = await db.query(
+    `SELECT * FROM articles WHERE article_id = $1 `,
+    [id],
+  );
+  if (exists.rows.length === 0) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+module.exports = { getUsers, DoesArticleExist };

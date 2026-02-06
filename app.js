@@ -22,6 +22,7 @@ app.use("/api/articles", articlesRouter);
 
 app.use("/api/users", usersRouter);
 
+//app.use(SomeErrorHandler) when a request comes in please use this function i wrote here
 //this app.use takes a callback function that handles the error
 //message or passes it down to the next error chain
 // error handlers come AFTER routes
@@ -45,5 +46,12 @@ app.use((err, req, res, next) => {
     next(err);
   }
 });
+
+// Catch all unexpected errors (500) - LAST
+// app.use((err, req, res, next) => {
+//   console.log(err); //detailed logg for developers
+//   //logging.log(err) log error to database could make function to create logger
+//   res.status(500).send({ msg: "Internal Server Error" }); //generic message for client
+// });
 
 module.exports = app;
