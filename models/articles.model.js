@@ -22,5 +22,18 @@ ORDER BY articles.created_at DESC`,
   return rows;
 };
 
+exports.fetchThisArticle = async (id) => {
+  const { rows } = await db.query(
+    `
+  SELECT * FROM articles
+  WHERE article_id = $1
+  `,
+    [id],
+  );
+
+  console.log(rows);
+  return rows;
+};
+
 //returning out the result of the query to be invoked by services
 // and then used by controller file
