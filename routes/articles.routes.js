@@ -10,17 +10,21 @@ const {
 
 const router = express.Router();
 
+const { methodNotAllowed } = require("../db/seeds/utils.js");
+
 //express has a method to construct routes called Router()
 
-router.get("/", getAllArticles);
+router.route("/").get(getAllArticles);
 
-router.get("/:id", getThisArticle); //uses the endpoint here to descide which controller to jump into
+router.route("/:id").get(getThisArticle); //uses the endpoint here to descide which controller to jump into
 
-router.patch("/:id", VoteOnThisArticle);
+router.route("/:id").patch(VoteOnThisArticle);
 
-router.get("/:id/comments", getCommentsForThisArticle);
-
-router.post("/:id/comments", postCommentOnThisArticle);
+router
+  .route("/:id/comments")
+  .post(postCommentOnThisArticle)
+  .get(getCommentsForThisArticle)
+  .all(methodNotAllowed);
 
 //a refrence to a model function
 // (a function in out model layer that fetches articles from the db)

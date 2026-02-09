@@ -9,6 +9,8 @@ const articlesRouter = require("./routes/articles.routes.js");
 
 const usersRouter = require("./routes/users.routes.js");
 
+const commentsRouter = require("./routes/comments.routes.js");
+
 const NotFoundError = require("./errors/NotFoundErrorClass.js");
 
 app.use(express.json()); //enable set-up for posting or patching
@@ -21,6 +23,8 @@ app.use("/api/topics", topicsRouter);
 app.use("/api/articles", articlesRouter);
 
 app.use("/api/users", usersRouter);
+
+app.use("/api/comments", commentsRouter);
 
 //app.use(SomeErrorHandler) when a request comes in please use this function i wrote here
 //this app.use takes a callback function that handles the error

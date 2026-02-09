@@ -8,6 +8,7 @@ const {
 } = require("../service/articles.service.js");
 
 exports.getAllArticles = async (request, response) => {
+  console.log(Object.keys(request));
   const result = await getAllArticlesServiceLayer();
 
   response.status(200).send({ articles: result });

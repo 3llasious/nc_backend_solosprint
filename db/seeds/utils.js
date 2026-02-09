@@ -17,4 +17,8 @@ function createLookupObj(Arr, keyrefStr, valrefStr) {
 //   titleidObj[article.title] = article.article_id;
 // }); // <----- loop through every object in the array and stored it's article id as article name in the titleidobject above (lookup object)
 
-module.exports = { createLookupObj };
+function methodNotAllowed(req, res, next) {
+  res.status(405).send({ msg: "method not allowed" });
+}
+
+module.exports = { createLookupObj, methodNotAllowed };

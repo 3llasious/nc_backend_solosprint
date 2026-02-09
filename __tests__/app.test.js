@@ -71,6 +71,78 @@ describe("/api/articles/", () => {
     expect(articles).toBeSortedBy("created_at", { descending: true });
   });
 });
+describe.skip("/api/articles/", () => {
+  test("GET: query filter request responds with status 200 and fetches all articles by ?sort_by=column_name", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?sort_by=author")
+      .expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { articles } = body;
+    console.log(articles);
+    //ASSERT
+    articles.forEach((article) => {
+      expect(typeof article.article_id).toBe("number");
+      expect(typeof article.title).toBe("string");
+      expect(typeof article.topic).toBe("string");
+      expect(typeof article.author).toBe("string");
+      expect(typeof article.created_at).toBe("string");
+      expect(typeof article.comment_count).toBe("number");
+      expect(typeof article.article_img_url).toBe("string");
+      //Testing the shape of the object which allowed db values to change without breaking the tests
+    });
+    expect(articles).toBeSortedBy("author", { descending: true });
+  });
+  test("GET: query filter request responds with status 200 and fetches all articles in descending order", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?order=asc")
+      .expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { articles } = body;
+    console.log(articles);
+    //ASSERT
+    articles.forEach((article) => {
+      expect(typeof article.article_id).toBe("number");
+      expect(typeof article.title).toBe("string");
+      expect(typeof article.topic).toBe("string");
+      expect(typeof article.author).toBe("string");
+      expect(typeof article.created_at).toBe("string");
+      expect(typeof article.comment_count).toBe("number");
+      expect(typeof article.article_img_url).toBe("string");
+      //Testing the shape of the object which allowed db values to change without breaking the tests
+    });
+    expect(articles).toBeSortedBy("created_at", { descending: true });
+  });
+  test("GET: query filter request responds with status 200 and fetches all articles in ascending order", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?order=desc")
+      .expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { articles } = body;
+    console.log(articles);
+    //ASSERT
+    articles.forEach((article) => {
+      expect(typeof article.article_id).toBe("number");
+      expect(typeof article.title).toBe("string");
+      expect(typeof article.topic).toBe("string");
+      expect(typeof article.author).toBe("string");
+      expect(typeof article.created_at).toBe("string");
+      expect(typeof article.comment_count).toBe("number");
+      expect(typeof article.article_img_url).toBe("string");
+      //Testing the shape of the object which allowed db values to change without breaking the tests
+    });
+    expect(articles).toBeSortedBy("created_at", { descending: false });
+  });
+});
+
 describe("/api/articles/:id", () => {
   test("GET: responds with status 200 and fetches specific article by id", async () => {
     //method to be tested and expected behaviour from the API
@@ -104,6 +176,20 @@ describe("/api/articles/:id", () => {
 });
 //VEIW COMMENTS
 describe("/api/articles/:id/comments", () => {
+  test("INVALID METHOD ERROR DELETE AND PATCH", () => {
+    const invalidMethods = ["delete", "patch"];
+    invalidMethods.forEach(async (invalidMethod) => {
+      const sendRequest = await request(app)
+        [invalidMethod]("/api/articles/:id/comments")
+        .expect(405);
+      const { body } = sendRequest;
+
+      const { msg } = body;
+
+      expect(msg).toBe("method not allowed");
+    });
+    //Add for other end points
+  });
   test("GET: responds with status 200 and fetches all comments for specific article by id", async () => {
     //method to be tested and expected behaviour from the API
     //ACT
@@ -127,6 +213,7 @@ describe("/api/articles/:id/comments", () => {
 
     //Testing the shape of the object which allowed db values to change without breaking the tests
   });
+
   test("GET: responds with status 200 and a message when article has no comments", async () => {
     //method to be tested and expected behaviour from the API
     //ACT
@@ -197,6 +284,7 @@ describe("/api/articles/:id/comments", () => {
 
     //Testing the shape of the object which allowed db values to change without breaking the tests
   });
+  // NEED A "BODY NOT COMPLETE" TEST FOR POST AND PATCH OR AN INVALID BODY, CHECK ID EXISTS IN THE DB AND BODY EXIXTS IN THE REQUEST OBJECT"
   test("POST: for an id that doesn't exist responds with status 404", async () => {
     //method to be tested and expected behaviour from the API
     //ACT
@@ -268,6 +356,51 @@ describe("/api/articles/:id", () => {
     //the upvote worked and added one to the votes of the article
 
     expect(article.votes).toBe(newCount);
+  });
+  test("PATCH: responds with status 200 and decreases the articles vote by 1", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+
+    // an array of a single obj waith elements to be inserted into the comments table
+
+    const sendRequest2 = await request(app).get("/api/articles/3").expect(200); //simulated sending a request and receiving a response
+
+    const body1 = sendRequest2.body;
+    const article2 = body1.article;
+    //to get current count
+    //ASSERT
+    const currentCount = article2.votes;
+
+    const upvote = { inc_votes: 1 };
+
+    const sendRequest = await request(app)
+      .patch("/api/articles/3")
+      .send(upvote)
+      .expect(200); //simulated sending an upvote request
+
+    const { body } = sendRequest;
+    const { article } = body;
+
+    //ASSERT
+
+    const newCount = currentCount + 1;
+
+    //the upvote worked and added one to the votes of the article
+
+    expect(article.votes).toBe(newCount);
+
+    const downvote = { inc_votes: -1 };
+
+    const sendRequest3 = await request(app)
+      .patch("/api/articles/3")
+      .send(downvote)
+      .expect(200); //simulated sending an upvote request
+
+    const body3 = sendRequest3.body;
+    const article3 = body3.article;
+
+    expect(article3.votes).toBe(currentCount);
+    //the downvote worked and reduced the votes of the article
 
     //Testing the shape of the object which allowed db values to change without breaking the tests
   });
@@ -290,5 +423,35 @@ describe("/api/users/", () => {
 
       //Testing the shape of the object which allowed db values to change without breaking the tests
     });
+  });
+});
+describe("/api/comments/:comment_id", () => {
+  test("DELETE: responds with status 204 and deletes the comment", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .delete("/api/comments/3")
+      .expect(204); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    //204s don't accept a body/message to be sent back
+
+    //ASSERT
+
+    expect(body).toEqual({});
+  });
+  test("DELETE: invalid comment id/doesn't exist triggers an error - comment not found and responds with status 404", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest2 = await request(app)
+      .delete("/api/comments/999999")
+      .expect(404); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest2;
+
+    const { msg } = body;
+    //ASSERT
+
+    expect(msg).toBe("comment not found");
   });
 });
