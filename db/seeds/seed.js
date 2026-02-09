@@ -40,6 +40,7 @@ const seed = async ({ topicData, userData, articleData, commentData }) => {
 
   let userQueryStr = format(
     "INSERT INTO users (username, name, avatar_url) VALUES %L ",
+    // %L = a placeholder for a list
     formattedUsers,
   );
 

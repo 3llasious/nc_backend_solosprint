@@ -6,24 +6,35 @@ const {
   fetchTheVoteUpdatedArticle,
 } = require("../models/articles.model.js");
 
-const { DoesArticleExist } = require("../db/seeds/queries.js");
+const {
+  DoesArticleExist,
+  isValidArticleColumn,
+  isValidTopicTitle,
+} = require("../utilsglobal.js");
 
 const NotFoundError = require("../errors/NotFoundErrorClass.js");
 const BadRequestError = require("../errors/BedRequestError.js");
 
-const { isValidArticleColumn } = require("../utilsglobal.js");
-
 exports.getAllArticles = async (query) => {
-  let { order = "desc", sort_by = "created_at" } = query; // set deafult values
+  let { order = "desc", sort_by = "created_at", topic } = query;
+
   const isvalid = await isValidArticleColumn(sort_by);
-  if (isvalid && (order === "desc" || order === "asc")) {
-    const sortedarticles = await fetchAllArticles(order, sort_by);
-    return sortedarticles;
-    //invoking model if it passes validation checks
-  } else {
-    //not passing the validation will trigger this bad request error
-    throw new BadRequestError("Bad request, sort_by column doesn't exist"); // sending an error if it doesn't
+
+  if (!isvalid || (order !== "desc" && order !== "asc")) {
+    throw new BadRequestError("Invalid parameters"); //validation layer to stop SQL injections
   }
+
+  // Only validate topic if it's provided
+  if (topic) {
+    //if topic is passed in/it exists then
+    const isvalidTopic = await isValidTopicTitle(topic);
+    if (!isvalidTopic) //if it is not valid then throw error
+    {
+      throw new NotFoundError("Topic does not exist");
+    }
+  }
+
+  return await fetchAllArticles(order, sort_by, topic);
 };
 
 exports.getThisArticle = async (id) => {

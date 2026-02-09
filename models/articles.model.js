@@ -1,10 +1,15 @@
+const { Query } = require("pg");
 const db = require("../db/connection");
 //import the db connection because this file deals with SQL queries
 
 //key word fetch here used for naming because we are actually fetching from db
-exports.fetchAllArticles = async (order = "desc", sort_by = "created_at") => {
-  let resultobj = await db.query(
-    `SELECT 
+exports.fetchAllArticles = async (
+  order = "desc",
+  sort_by = "created_at",
+  topic,
+) => {
+  let filterArr = [];
+  let query = `SELECT 
   articles.article_id,
   articles.author,
   articles.title,
@@ -15,9 +20,16 @@ exports.fetchAllArticles = async (order = "desc", sort_by = "created_at") => {
   CAST(COUNT(comments.body) AS int) AS comment_count
 FROM articles
 LEFT JOIN comments ON articles.article_id = comments.article_id
-GROUP BY articles.article_id
-ORDER BY articles.${sort_by} ${order.toUpperCase()}`,
-  );
+`;
+  console.log(topic);
+  if (topic) {
+    query += ` WHERE topic = $1`;
+    filterArr.push(topic);
+  }
+
+  query += ` GROUP BY articles.article_id ORDER BY articles.${sort_by} ${order.toUpperCase()}`;
+
+  const resultobj = await db.query(query, filterArr);
 
   const { rows } = resultobj;
   return rows;
@@ -25,9 +37,14 @@ ORDER BY articles.${sort_by} ${order.toUpperCase()}`,
 
 exports.fetchThisArticle = async (id) => {
   const { rows } = await db.query(
-    `
-  SELECT * FROM articles
-  WHERE article_id = $1
+    `SELECT 
+  articles.*,
+  CAST(COUNT(comments.comment_id) 
+  AS int) AS comment_count
+FROM articles
+LEFT JOIN comments ON articles.article_id = comments.article_id
+WHERE articles.article_id = $1
+GROUP BY articles.article_id
   `,
     [id],
   );

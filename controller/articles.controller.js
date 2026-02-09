@@ -8,9 +8,9 @@ const {
 } = require("../service/articles.service.js");
 
 exports.getAllArticles = async (request, response, next) => {
-  console.log(Object.keys(request));
+  // console.log(Object.keys(request));
   // console.log(request.url);   is  /?order=desc
-  console.log(request.query);
+  // console.log(request.query);
 
   const { url } = request;
   const { query } = request;

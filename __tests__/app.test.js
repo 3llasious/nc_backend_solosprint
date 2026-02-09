@@ -82,7 +82,19 @@ describe("QUERIES: /api/articles/", () => {
     const { body } = sendRequest;
     const { msg } = body;
 
-    expect(msg).toBe("Bad request, sort_by column doesn't exist");
+    expect(msg).toBe("Invalid parameters");
+  });
+  test("400 ERROR: query filter request responds with status 400 when an invalid query paramter is sent", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?topic=banana")
+      .expect(404); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { msg } = body;
+
+    expect(msg).toBe("Topic does not exist");
   });
   test("GET: query filter request responds with status 200 and fetches all articles by ?sort_by=column_name", async () => {
     //method to be tested and expected behaviour from the API
@@ -153,6 +165,21 @@ describe("QUERIES: /api/articles/", () => {
     });
     expect(articles).toBeSortedBy("created_at", { descending: false });
   });
+
+  test("GET: query filter request responds with status 200 and fetches all articles by sorting by topic", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?topic=mitch")
+      .expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { articles } = body;
+    articles.forEach((article) => {
+      expect(article.topic).toBe("mitch");
+    });
+    //ASSERT
+  });
 });
 
 describe("/api/articles/:id", () => {
@@ -171,6 +198,7 @@ describe("/api/articles/:id", () => {
     expect(typeof article.author).toBe("string");
     expect(typeof article.created_at).toBe("string");
     expect(typeof article.article_img_url).toBe("string");
+    expect(typeof article.comment_count).toBe("number");
     //Testing the shape of the object which allowed db values to change without breaking the tests
   });
   test("GET: for an id that doesn't exist responds with status 404", async () => {
@@ -451,6 +479,11 @@ describe("/api/comments/:comment_id", () => {
     //ASSERT
 
     expect(body).toEqual({});
+    const sendRequest2 = await request(app)
+      .delete("/api/comments/3")
+      .expect(404);
+
+    expect(sendRequest2.body.msg).toBe("comment not found"); //confirmation of deletion
   });
   test("DELETE: invalid comment id/doesn't exist triggers an error - comment not found and responds with status 404", async () => {
     //method to be tested and expected behaviour from the API
