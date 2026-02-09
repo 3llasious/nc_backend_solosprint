@@ -9,11 +9,21 @@ const {
 const { DoesArticleExist } = require("../db/seeds/queries.js");
 
 const NotFoundError = require("../errors/NotFoundErrorClass.js");
+const BadRequestError = require("../errors/BedRequestError.js");
 
-//require in the query function we will invoke
+const { isValidArticleColumn } = require("../utilsglobal.js");
 
-exports.getAllArticles = () => {
-  return fetchAllArticles();
+exports.getAllArticles = async (query) => {
+  let { order = "desc", sort_by = "created_at" } = query; // set deafult values
+  const isvalid = await isValidArticleColumn(sort_by);
+  if (isvalid && (order === "desc" || order === "asc")) {
+    const sortedarticles = await fetchAllArticles(order, sort_by);
+    return sortedarticles;
+    //invoking model if it passes validation checks
+  } else {
+    //not passing the validation will trigger this bad request error
+    throw new BadRequestError("Bad request, sort_by column doesn't exist"); // sending an error if it doesn't
+  }
 };
 
 exports.getThisArticle = async (id) => {

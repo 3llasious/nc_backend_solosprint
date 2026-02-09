@@ -56,7 +56,7 @@ describe("/api/articles/", () => {
 
     const { body } = sendRequest;
     const { articles } = body;
-    console.log(articles);
+
     //ASSERT
     articles.forEach((article) => {
       expect(typeof article.article_id).toBe("number");
@@ -71,7 +71,19 @@ describe("/api/articles/", () => {
     expect(articles).toBeSortedBy("created_at", { descending: true });
   });
 });
-describe.skip("/api/articles/", () => {
+describe("QUERIES: /api/articles/", () => {
+  test("400 ERROR: query filter request responds with status 400 when an invalid query paramter is sent", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app)
+      .get("/api/articles?sort_by=banana")
+      .expect(400); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { msg } = body;
+
+    expect(msg).toBe("Bad request, sort_by column doesn't exist");
+  });
   test("GET: query filter request responds with status 200 and fetches all articles by ?sort_by=column_name", async () => {
     //method to be tested and expected behaviour from the API
     //ACT
@@ -81,7 +93,7 @@ describe.skip("/api/articles/", () => {
 
     const { body } = sendRequest;
     const { articles } = body;
-    console.log(articles);
+
     //ASSERT
     articles.forEach((article) => {
       expect(typeof article.article_id).toBe("number");
@@ -99,12 +111,12 @@ describe.skip("/api/articles/", () => {
     //method to be tested and expected behaviour from the API
     //ACT
     const sendRequest = await request(app)
-      .get("/api/articles?order=asc")
+      .get("/api/articles?order=desc")
       .expect(200); //simulated sending a request and receiving a response
 
     const { body } = sendRequest;
     const { articles } = body;
-    console.log(articles);
+
     //ASSERT
     articles.forEach((article) => {
       expect(typeof article.article_id).toBe("number");
@@ -122,12 +134,12 @@ describe.skip("/api/articles/", () => {
     //method to be tested and expected behaviour from the API
     //ACT
     const sendRequest = await request(app)
-      .get("/api/articles?order=desc")
+      .get("/api/articles?order=asc")
       .expect(200); //simulated sending a request and receiving a response
 
     const { body } = sendRequest;
     const { articles } = body;
-    console.log(articles);
+
     //ASSERT
     articles.forEach((article) => {
       expect(typeof article.article_id).toBe("number");

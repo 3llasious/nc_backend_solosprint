@@ -7,11 +7,25 @@ const {
   VoteOnThisArticle: VoteOnThisArticleSL,
 } = require("../service/articles.service.js");
 
-exports.getAllArticles = async (request, response) => {
+exports.getAllArticles = async (request, response, next) => {
   console.log(Object.keys(request));
-  const result = await getAllArticlesServiceLayer();
+  // console.log(request.url);   is  /?order=desc
+  console.log(request.query);
 
-  response.status(200).send({ articles: result });
+  const { url } = request;
+  const { query } = request;
+  try {
+    if (query) {
+      const result = await getAllArticlesServiceLayer(query);
+      response.status(200).send({ articles: result });
+    } else {
+      const result = await getAllArticlesServiceLayer();
+      response.status(200).send({ articles: result });
+    }
+  } catch (err) {
+    console.log(err);
+    next(err);
+  }
 
   //nothing needed frm the request obj here
 };

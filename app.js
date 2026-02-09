@@ -12,6 +12,7 @@ const usersRouter = require("./routes/users.routes.js");
 const commentsRouter = require("./routes/comments.routes.js");
 
 const NotFoundError = require("./errors/NotFoundErrorClass.js");
+const BadRequestError = require("./errors/BedRequestError.js");
 
 app.use(express.json()); //enable set-up for posting or patching
 
@@ -45,6 +46,15 @@ app.all("/*path", (req, res, next) => {
 app.use((err, req, res, next) => {
   if (err instanceof NotFoundError) {
     res.status(404).send({ msg: err.message });
+    //
+  } else {
+    next(err);
+  }
+});
+
+app.use((err, req, res, next) => {
+  if (err instanceof BadRequestError) {
+    res.status(400).send({ msg: err.message });
     //
   } else {
     next(err);
