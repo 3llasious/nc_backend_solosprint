@@ -11,11 +11,12 @@ if (ENV === "production") {
   config.connectionString = process.env.DATABASE_URL;
   config.max = 2;
   config.ssl = { rejectUnauthorized: false }; // CRITICAL FOR SUPABASE!
-  console.log("🔍 DEBUG - Production config set with DATABASE_URL");
-  console.log(
-    "🔍 DEBUG - Connection string starts with:",
-    process.env.DATABASE_URL?.substring(0, 30),
-  );
+  // Force these to be undefined so they don't override
+  delete process.env.PGHOST;
+  delete process.env.PGUSER;
+  delete process.env.PGPASSWORD;
+  delete process.env.PGDATABASE;
+  delete process.env.PGPORT;
 } // configiration check, passed into pool connection, max connections set to two
 
 if (!process.env.PGDATABASE && !process.env.DATABASE_URL) {
