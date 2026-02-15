@@ -8,6 +8,7 @@ const config = {};
 if (ENV === "production") {
   config.connectionString = process.env.DATABASE_URL;
   config.max = 2;
+  config.ssl = { rejectUnauthorized: false }; // CRITICAL FOR SUPABASE!
 } // configiration check, passed into pool connection, max connections set to two
 
 if (!process.env.PGDATABASE && !process.env.DATABASE_URL) {
