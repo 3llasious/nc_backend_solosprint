@@ -2,10 +2,9 @@ const { Pool } = require("pg");
 
 const ENV = process.env.NODE_ENV || "development";
 
-console.log("🔍 DEBUG - ENV:", ENV);
-console.log("🔍 DEBUG - DATABASE_URL exists:", !!process.env.DATABASE_URL);
-
-require("dotenv").config({ path: `${__dirname}/../.env.${ENV}` });
+if (ENV !== "production") {
+  require("dotenv").config({ path: `${__dirname}/../.env.${ENV}` });
+}
 
 const config = {};
 if (ENV === "production") {
@@ -26,8 +25,6 @@ if (!process.env.PGDATABASE && !process.env.DATABASE_URL) {
     `Connected to ${process.env.PGDATABASE || "production database"}`,
   );
 }
-
-console.log("🔍 DEBUG - Final config:", JSON.stringify(config, null, 2));
 
 const db = new Pool(config);
 
