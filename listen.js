@@ -4,8 +4,8 @@ const app = require("./app.js");
 // run file - we use script set up in package json
 // npm run dev to run this
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
-  console.log("listening on port 800");
+  console.log(`Server is listening on port ${PORT}...`);
 });
