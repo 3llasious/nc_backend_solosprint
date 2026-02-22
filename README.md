@@ -45,8 +45,8 @@ DELETE routes:
 to be added, upvote/downvote a comment, update a comment, get a user
 
 System Requirements:
-Node.js vX+
-PostgreSQL vX+
+Node.js v25.2.1
+PostgreSQL 14.20
 
 Create environment files:
 .env.development
