@@ -217,7 +217,39 @@ header p {
 /* status code styling */
 
 .code-block {
+  background: #1a1a1a;
+  color: #d4d4d4;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.75rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: auto;
 }
 
-.code-block p {
+.code-block .key {
+  color: #9cdcfe;
+}
+.code-block .str {
+  color: #ce9178;
+}
+.code-block .num {
+  color: #b5cea8;
+}
+.code-block .bool {
+  color: #569cd6;
+}
+.code-block .label {
+  color: #888;
+  font-style: italic;
+}
+
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  /* wraps on small screens instead of scrolling */
+  font: inherit;
+  /* inherits DM Mono and size from .code-block */
 }

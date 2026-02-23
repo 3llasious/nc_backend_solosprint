@@ -41,7 +41,18 @@
             </li>
           </ul>
           <p>Returns all topics from the database.</p>
-          <div></div>
+          <div class="code-block">
+            <pre><span class="label">// response body</span>
+{
+  <span class="key">"topics"</span>: [
+    {
+      <span class="key">"slug"</span>: <span class="str">"mitch"</span>,
+      <span class="key">"description"</span>: <span class="str">"The man, the Mitch, the legend"</span>,
+      <span class="key">"img_url"</span>: <span class="str">"https://..."</span>
+    }
+  ]
+}</pre>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -65,6 +76,22 @@
             </li>
           </ul>
           <p>Returns all articles from the database.</p>
+          <div class="code-block">
+            <pre><span class="label">// GET /api/articles?sort_by=author&order=asc&topic=mitch</span>
+{
+  <span class="key">"articles"</span>: [
+    {
+      <span class="key">"article_id"</span>: <span class="num">1</span>,
+      <span class="key">"title"</span>: <span class="str">"Living in the shadow of a great man"</span>,
+      <span class="key">"topic"</span>: <span class="str">"mitch"</span>,
+      <span class="key">"author"</span>: <span class="str">"butter_bridge"</span>,
+      <span class="key">"created_at"</span>: <span class="str">"2020-07-09T20:11:00.000Z"</span>,
+      <span class="key">"comment_count"</span>: <span class="num">11</span>,
+      <span class="key">"article_img_url"</span>: <span class="str">"https://..."</span>
+    }
+  ]
+}</pre>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -92,6 +119,20 @@
             </li>
           </ul>
           <p>Returns an article from the database.</p>
+          <div class="code-block">
+            <pre><span class="label">// GET /api/articles/3</span>
+{
+  <span class="key">"article"</span>: {
+    <span class="key">"article_id"</span>: <span class="num">3</span>,
+    <span class="key">"title"</span>: <span class="str">"Eight pug gifs..."</span>,
+    <span class="key">"topic"</span>: <span class="str">"mitch"</span>,
+    <span class="key">"author"</span>: <span class="str">"icellusedkars"</span>,
+    <span class="key">"votes"</span>: <span class="num">0</span>,
+    <span class="key">"comment_count"</span>: <span class="num">2</span>,
+    <span class="key">"created_at"</span>: <span class="str">"2020-11-03T09:12:00.000Z"</span>
+  }
+}</pre>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -122,6 +163,21 @@
             </li>
           </ul>
           <p>Returns all comments on a particular article from the database.</p>
+          <div class="code-block">
+            <pre><span class="label">// GET /api/articles/3/comments</span>
+{
+  <span class="key">"comments"</span>: [
+    {
+      <span class="key">"comment_id"</span>: <span class="num">10</span>,
+      <span class="key">"article_id"</span>: <span class="num">3</span>,
+      <span class="key">"author"</span>: <span class="str">"icellusedkars"</span>,
+      <span class="key">"votes"</span>: <span class="num">100</span>,
+      <span class="key">"body"</span>: <span class="str">"git push origin master"</span>,
+      <span class="key">"created_at"</span>: <span class="str">"2020-06-20T07:24:00.000Z"</span>
+    }
+  <span class="label">//{},{}...other comment objects</span>]
+}</pre>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -145,6 +201,18 @@
             </li>
           </ul>
           <p>Returns all users from the database.</p>
+          <div class="code-block">
+            <pre><span class="label">// GET /api/users</span>
+{
+  <span class="key">"users"</span>: [
+    {
+      <span class="key">"username"</span>: <span class="str">"butter_bridge"</span>,
+      <span class="key">"name"</span>: <span class="str">"jonny"</span>,
+      <span class="key">"avatar_url"</span>: <span class="str">"https://..."</span>
+    }
+  <span class="label">//{},{}...other user objects</span>]
+}</pre>
+          </div>
         </div>
       </div>
       <header class="section-label"><p>POST: routes</p></header>
@@ -179,6 +247,25 @@
             Posts a new comment to a specific article. Request body must include
             <code>body</code> and <code>author</code> fields.
           </p>
+          <div class="code-block">
+            <pre><span class="label">// request body</span>
+{
+  <span class="key">"body"</span>: <span class="str">"Oh, I've got compassion running out of my nose!"</span>,
+  <span class="key">"author"</span>: <span class="str">"butter_bridge"</span>
+}
+
+<span class="label">// response body</span>
+{
+  <span class="key">"comment"</span>: {
+    <span class="key">"comment_id"</span>: <span class="num">19</span>,
+    <span class="key">"article_id"</span>: <span class="num">3</span>,
+    <span class="key">"author"</span>: <span class="str">"butter_bridge"</span>,
+    <span class="key">"votes"</span>: <span class="num">0</span>,
+    <span class="key">"body"</span>: <span class="str">"Oh, I've got compassion running out of my nose!"</span>,
+    <span class="key">"created_at"</span>: <span class="str">"2024-01-01T00:00:00.000Z"</span>
+  }
+}</pre>
+          </div>
         </div>
       </div>
       <header class="section-label"><p>PATCH: routes</p></header>
@@ -207,6 +294,22 @@
             <code>{ inc_votes: 1 }</code> to upvote or
             <code>{ inc_votes: -1 }</code> to downvote.
           </p>
+          <div class="code-block">
+            <pre><span class="label">// request body — upvote</span>
+{ <span class="key">"inc_votes"</span>: <span class="num">1</span> }
+
+<span class="label">// request body — downvote</span>
+{ <span class="key">"inc_votes"</span>: <span class="num">-1</span> }
+
+<span class="label">// response body is article object with updated vote count</span>
+{
+  <span class="key">"article"</span>: {
+    <span class="key">"article_id"</span>: <span class="num">3</span>,
+    <span class="key">"votes"</span>: <span class="num">1</span>,
+    <span class="key">"title"</span>: <span class="str">"Eight pug gifs..."</span>
+  }
+}</pre>
+          </div>
         </div>
       </div>
       <header class="section-label"><p>DELETE: routes</p></header>
@@ -231,6 +334,14 @@
             </li>
           </ul>
           <p>Returns all topics from the database.</p>
+          <div class="code-block">
+            <span class="label">// DELETE /api/comments/3</span><br />
+            <span class="label">// 204 — no response body returned</span
+            ><br /><br />
+            <span class="label">// attempt to delete again:</span><br />
+            { <span class="key">"msg"</span>:
+            <span class="str">"comment not found"</span> }
+          </div>
         </div>
       </div>
       <header class="section-label"><p>Why am I getting this error?</p></header>
