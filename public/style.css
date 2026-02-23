@@ -180,6 +180,8 @@ header p {
   color: var(--error-text);
 }
 
+/* status code styling */
+
 .status {
   padding: 0.1rem 0.45rem;
   border-radius: 6px;
@@ -213,8 +215,6 @@ header p {
   background: #e8d5f5;
   color: #5b2d8e;
 }
-
-/* status code styling */
 
 .code-block {
   background: #1a1a1a;
