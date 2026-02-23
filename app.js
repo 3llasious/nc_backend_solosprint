@@ -15,7 +15,7 @@ const NotFoundError = require("./errors/NotFoundErrorClass.js");
 const BadRequestError = require("./errors/BedRequestError.js");
 
 app.use(express.json()); //enable set-up for posting or patching
-app.use("/api", express.static("public")); // enables "public" folder to be served whenever someone navigates to the /api endpoint
+app.use("/api", express.static(path.join(__dirname, "public"))); // enables "public" folder to be served whenever someone navigates to the /api endpoint
 app.use("/api/topics", topicsRouter);
 // start point/ entry file
 // if it has this start part of the URL go to this router

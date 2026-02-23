@@ -16,6 +16,17 @@
 }
 /* now with :root you change it in one place */
 
+li {
+  list-style: none;
+}
+
+code {
+  background: #f0eeea; /* light beige chip */
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+  font-family: "DM Mono", monospace;
+}
+
 body {
   font-family: "Syne", sans-serif;
   background: var(--bg);
@@ -68,6 +79,14 @@ header p {
   overflow: hidden;
   margin-bottom: 1rem;
 }
+.card-body {
+  display: none;
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #f0f0f0; /* all hidden by default */
+}
+.card.open .card-body {
+  display: block;
+}
 
 .card-header {
   display: flex;
@@ -77,16 +96,21 @@ header p {
   gap: 1rem;
 }
 
+.card-header-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .card-header:hover {
   background: #f7e8e8;
   transition: background 0.15s ease;
 }
 
 .card-title {
-  flex: 1;
-  font-weight: 550;
-  color: #23222e;
-  /* controls boldness 500 and up*/
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .card-body p {
@@ -105,6 +129,7 @@ header p {
   font-size: 0.75rem;
   color: #888;
   font-weight: 300;
+  word-break: break-all; /* breaks the path at any character */
 }
 
 .down_button {
@@ -153,4 +178,46 @@ header p {
 .badge-error {
   background: var(--error);
   color: var(--error-text);
+}
+
+.status {
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.s200 {
+  background: #d4edda;
+  color: #1a6630;
+}
+.s201 {
+  background: #cce5ff;
+  color: #004085;
+}
+.s204 {
+  background: #e2e3e5;
+  color: #383d41;
+}
+.s400 {
+  background: #fff3cd;
+  color: #856404;
+}
+.s404 {
+  background: #f8d7da;
+  color: #721c24;
+}
+.s405 {
+  background: #e8d5f5;
+  color: #5b2d8e;
+}
+
+/* status code styling */
+
+.code-block {
+}
+
+.code-block p {
 }

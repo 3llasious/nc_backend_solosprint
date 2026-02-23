@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>EXPOSÉ</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header><h1>THE EXPOSÉ: OFFICIAL API MENU</h1></header>
     <section>
       <p class="description">
         Welcome Fellow Dev, I beleive documentation for devs should be as
-        well-structured and easy to navigate as user interfaces are. So please
-        see the available endpoints by method by clicking the expand butons on
-        the relevant card below. Each method will also include examples (so you
-        know what what responses to expect from the server - happy hunting!)
+        readable and easy to navigate as user interfaces are. So please see the
+        available endpoints by method by clicking the expand butons on the
+        relevant card below. Each method will also include examples (so you know
+        what what responses to expect from the server - happy hunting!)
       </p>
     </section>
     <main>
@@ -22,62 +23,227 @@
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-get">GET</span>
-          <span class="card-title">All Topics</span>
-          <span class="card-path">/api/topics</span>
+          <div class="card-header-text">
+            <span class="card-title">All Topics</span>
+            <span class="card-path">/api/topics</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of topic objects</p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p><code>msg: "Path not found"</code></p>
+            </li>
+          </ul>
+          <p>Returns all topics from the database.</p>
+          <div></div>
         </div>
       </div>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-get">GET</span>
-          <span class="card-title">All Articles</span>
-          <span class="card-path">/api/articles</span>
+          <div class="card-header-text">
+            <span class="card-title">All Articles</span>
+            <span class="card-path">/api/articles</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of topic objects</p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p><code>msg: "Path not found"</code></p>
+            </li>
+          </ul>
+          <p>Returns all articles from the database.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-get">GET</span>
-          <span class="card-title">All Users</span>
-          <span class="card-path">/api/users</span>
+          <div class="card-header-text">
+            <span class="card-title">Get an Article</span>
+            <span class="card-path">/api/articles/:arti_id</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns an object of article information</p>
+            </li>
+            <li>
+              <span class="status s404">404</span>
+              <p><code>msg: "ID not found"</code></p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p><code>msg: "Path not found"</code></p>
+            </li>
+          </ul>
+          <p>Returns an article from the database.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-get">GET</span>
+          <div class="card-header-text">
+            <span class="card-title">Get Comments on this Article</span>
+            <span class="card-path">/api/articles/:arti_id/comments</span>
+          </div>
+          <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of comment objects</p>
+            </li>
+            <li>
+              <span class="status s404">404</span>
+              <p><code>msg: "ID not found"</code></p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p>
+                <code>msg: "ID not found"</code> : Check your article Id is
+                valid
+              </p>
+            </li>
+          </ul>
+          <p>Returns all comments on a particular article from the database.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-get">GET</span>
+          <div class="card-header-text">
+            <span class="card-title">All Users</span>
+            <span class="card-path">/api/users</span>
+          </div>
+          <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of user objects</p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p><code>msg: "Path not found"</code></p>
+            </li>
+          </ul>
+          <p>Returns all users from the database.</p>
         </div>
       </div>
       <header class="section-label"><p>POST: routes</p></header>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-post">POST</span>
-          <span class="card-title">Post a Comment</span>
-          <span class="card-path">/api/articles/:article_id/comments</span>
+          <div class="card-header-text">
+            <span class="card-title">Post a Comment</span>
+            <span class="card-path">/api/articles/:arti_id/comments</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s201">201</span>
+              <p>Returns newly created comment object</p>
+            </li>
+            <li>
+              <span class="status s404">404</span>
+              <p>
+                <code>msg: "ID not found"</code> : Check your article Id is
+                valid
+              </p>
+            </li>
+            <li>
+              <span class="status s404">500</span>
+              <p><code>msg: "Path not found"</code></p>
+            </li>
+          </ul>
+          <p>
+            Posts a new comment to a specific article. Request body must include
+            <code>body</code> and <code>author</code> fields.
+          </p>
         </div>
       </div>
       <header class="section-label"><p>PATCH: routes</p></header>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-patch">PATCH</span>
-          <span class="card-title">Upvote/Downvote an Article</span>
-          <span class="card-path">/api/articles/:article_id</span>
+          <div class="card-header-text">
+            <span class="card-title">Upvote/Downvote an Article</span>
+            <span class="card-path">/api/articles/:arti_id</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of topic objects</p>
+            </li>
+            <li>
+              <span class="status s404">404</span>
+              <p><code>msg: "Id not found"</code></p>
+            </li>
+          </ul>
+          <p>
+            Increments or decrements the vote count on an article. Send
+            <code>{ inc_votes: 1 }</code> to upvote or
+            <code>{ inc_votes: -1 }</code> to downvote.
+          </p>
         </div>
       </div>
       <header class="section-label"><p>DELETE: routes</p></header>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-delete">DELETE</span>
-          <span class="card-title">Delete a Comment</span>
-          <span class="card-path">/api/comments/:comment_id</span>
+          <div class="card-header-text">
+            <span class="card-title">Delete a Comment</span>
+            <span class="card-path">/api/comments/:comm_id</span>
+          </div>
           <button class="down_button" type="button">▾</button>
+        </div>
+        <div class="card-body">
+          <ul class="response-list">
+            <li>
+              <span class="status s200">200</span>
+              <p>Returns array of topic objects</p>
+            </li>
+            <li>
+              <span class="status s404">404</span>
+              <p><code>msg: "ID not found"</code></p>
+            </li>
+          </ul>
+          <p>Returns all topics from the database.</p>
         </div>
       </div>
       <header class="section-label"><p>Why am I getting this error?</p></header>
       <div class="card">
         <div class="card-header">
           <span class="method-badge badge-error">400</span>
-          <span class="card-title">Resource Not Found</span>
-          <span class="card-path">WIP</span>
+          <div class="card-header-text">
+            <span class="card-title">Resource Not Found</span>
+            <span class="card-path">WIP</span>
+          </div>
           <button class="down_button" type="button">▾</button>
         </div>
+        <div class="card-body"></div>
       </div>
     </main>
     <footer></footer>
