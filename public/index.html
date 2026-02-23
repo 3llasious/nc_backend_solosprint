@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>THE EXPOSÉ: OFFICIAL API MENU</h1></header>
+    <section>
+      <p class="description">
+        Welcome Fellow Dev, I beleive documentation for devs should be as
+        well-structured and easy to navigate as user interfaces are. So please
+        see the available endpoints by method by clicking the expand butons on
+        the relevant card below. Each method will also include examples (so you
+        know what what responses to expect from the server - happy hunting!)
+      </p>
+    </section>
+    <main>
+      <header class="section-label"><p>GET: routes</p></header>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-get">GET</span>
+          <span class="card-title">All Topics</span>
+          <span class="card-path">/api/topics</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-get">GET</span>
+          <span class="card-title">All Articles</span>
+          <span class="card-path">/api/articles</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-get">GET</span>
+          <span class="card-title">All Users</span>
+          <span class="card-path">/api/users</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <header class="section-label"><p>POST: routes</p></header>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-post">POST</span>
+          <span class="card-title">Post a Comment</span>
+          <span class="card-path">/api/articles/:article_id/comments</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <header class="section-label"><p>PATCH: routes</p></header>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-patch">PATCH</span>
+          <span class="card-title">Upvote/Downvote an Article</span>
+          <span class="card-path">/api/articles/:article_id</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <header class="section-label"><p>DELETE: routes</p></header>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-delete">DELETE</span>
+          <span class="card-title">Delete a Comment</span>
+          <span class="card-path">/api/comments/:comment_id</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+      <header class="section-label"><p>Why am I getting this error?</p></header>
+      <div class="card">
+        <div class="card-header">
+          <span class="method-badge badge-error">400</span>
+          <span class="card-title">Resource Not Found</span>
+          <span class="card-path">WIP</span>
+          <button class="down_button" type="button">▾</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

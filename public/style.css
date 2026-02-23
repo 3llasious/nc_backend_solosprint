@@ -1,0 +1,156 @@
+:root {
+  --bg: #f5f3ef;
+  --card-bg: #ffffff;
+  --shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.12);
+  --radius: 28px;
+  --get: #d4edda;
+  --get-text: #1a6630;
+  --post: #cce5ff;
+  --post-text: #004085;
+  --patch: #fff3cd;
+  --patch-text: #856404;
+  --delete: #f8d7da;
+  --delete-text: #721c24;
+  --error: #e8d5f5;
+  --error-text: #5b2d8e;
+}
+/* now with :root you change it in one place */
+
+body {
+  font-family: "Syne", sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 2.5rem 2rem 4rem;
+  color: #1a1a1a;
+}
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #721c24; /* font colour */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: "DM Mono", monospace;
+  line-height: 1.5;
+}
+
+header p {
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 1.7; /* generous spacing between lines for readability */
+  max-width: 680px; /* stops the paragraph stretching too wide on large screens */
+  color: #444;
+}
+
+.section-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.card-header:hover {
+  background: #f7e8e8;
+  transition: background 0.15s ease;
+}
+
+.card-title {
+  flex: 1;
+  font-weight: 550;
+  color: #23222e;
+  /* controls boldness 500 and up*/
+}
+
+.card-body p {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #555;
+  margin: 1rem 0 0.75rem;
+  line-height: 1.6;
+}
+
+/* a p element that lives inside a card body */
+
+.card-path {
+  font-family: "DM Mono", monospace;
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 300;
+}
+
+.down_button {
+  background: #f4d1d1;
+  border-color: #fff;
+  border-radius: 28px;
+  width: auto;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  padding: 0.4rem 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.down_button:hover {
+  background-color: #f69e9e;
+  cursor: pointer;
+}
+
+.method-badge {
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-get {
+  background: var(--get);
+  color: var(--get-text);
+}
+/* var(--get) just means "go look up whatever --get is set to" */
+.badge-post {
+  background: var(--post);
+  color: var(--post-text);
+}
+.badge-patch {
+  background: var(--patch);
+  color: var(--patch-text);
+}
+.badge-delete {
+  background: var(--delete);
+  color: var(--delete-text);
+}
+.badge-error {
+  background: var(--error);
+  color: var(--error-text);
+}
