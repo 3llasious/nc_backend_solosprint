@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const topicsRouter = require("./routes/topics.routes.js");
+const cors = require("cors");
 //renaming router we exported from topics.route.js which is called router
 //to be topicsRouter in this file for clarity
 
@@ -14,6 +15,7 @@ const commentsRouter = require("./routes/comments.routes.js");
 const NotFoundError = require("./errors/NotFoundErrorClass.js");
 const BadRequestError = require("./errors/BedRequestError.js");
 
+app.use(cors());
 app.use(express.json()); //enable set-up for posting or patching
 app.use("/api", express.static("public")); // enables "public" folder to be served whenever someone navigates to the /api endpoint
 app.use("/api/topics", topicsRouter);
