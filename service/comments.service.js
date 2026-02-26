@@ -1,4 +1,4 @@
-const { removeComment } = require("../models/comments.model.js");
+const { removeComment, fetchComments } = require("../models/comments.model.js");
 const NotFoundError = require("../errors/NotFoundErrorClass.js");
 
 exports.deleteComment = async (id) => {
@@ -8,4 +8,9 @@ exports.deleteComment = async (id) => {
   } else {
     return comment;
   }
+};
+
+exports.getAllCommentsSL = async () => {
+  const comments = await fetchComments();
+  return comments;
 };

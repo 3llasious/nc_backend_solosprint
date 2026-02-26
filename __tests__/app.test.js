@@ -181,6 +181,30 @@ describe("QUERIES: /api/articles/", () => {
   });
 });
 
+describe("/api/comments", () => {
+  test("GET: responds with status 200 and fetches all comments", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const sendRequest = await request(app).get("/api/comments").expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest;
+    const { comments } = body;
+
+    console.log(comments);
+
+    //ASSERT
+    comments.forEach((comment) => {
+      expect(typeof comment.article_id).toBe("number");
+      expect(typeof comment.comment_id).toBe("number");
+      expect(typeof comment.author).toBe("string");
+      expect(typeof comment.created_at).toBe("string");
+      expect(typeof comment.votes).toBe("number");
+      expect(typeof comment.body).toBe("string");
+      //Testing the shape of the object which allowed db values to change without breaking the tests
+    });
+  });
+});
+
 describe("/api/articles/:id", () => {
   test("GET: responds with status 200 and fetches specific article by id", async () => {
     //method to be tested and expected behaviour from the API

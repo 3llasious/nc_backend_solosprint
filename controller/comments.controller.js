@@ -1,5 +1,6 @@
 const {
   deleteComment: deleteCommentServiceLayer,
+  getAllCommentsSL,
 } = require("../service/comments.service.js");
 
 exports.deleteComment = async (req, res, next) => {
@@ -14,4 +15,11 @@ exports.deleteComment = async (req, res, next) => {
     next(err);
   }
   // should be the deleted comment
+};
+
+exports.getAllComments = async (req, res, next) => {
+  try {
+    const result = await getAllCommentsSL();
+    res.status(200).send({ comments: result });
+  } catch (err) {}
 };

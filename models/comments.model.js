@@ -9,3 +9,8 @@ exports.removeComment = async (id) => {
   );
   return deletethiscomment.rows[0];
 };
+
+exports.fetchComments = async () => {
+  const { rows } = await db.query(`SELECT * FROM comments`);
+  return rows;
+};
