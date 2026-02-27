@@ -384,6 +384,42 @@ describe("/api/articles/:id/comments", () => {
     //ASSERT
     expect(msg).toBe("Path not found");
   });
+  test("POST: for an empty author field responds with status 400", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const postComment = {
+      body: "Oh, I've got compassion running out of my nose, pal! I'm the Sultan of Sentiment!",
+      author: "",
+    };
+    const sendRequest = await request(app)
+      .post("/api/articles/3/comments")
+      .send(postComment)
+      .expect(400); //simulated sending an invalid request and receiving a response
+
+    const { body } = sendRequest;
+    const { msg } = body;
+
+    //ASSERT
+    expect(msg).toBe("Login is required to perform this action");
+  });
+  test("POST: for a body that is empty responds with status 400", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const postComment = {
+      body: "",
+      author: "butter_bridge",
+    };
+    const sendRequest = await request(app)
+      .post("/api/articles/3/comments")
+      .send(postComment)
+      .expect(400); //simulated sending an invalid request and receiving a response
+
+    const { body } = sendRequest;
+    const { msg } = body;
+
+    //ASSERT
+    expect(msg).toBe("Body is a required field");
+  });
 });
 
 describe("/api/articles/:id", () => {

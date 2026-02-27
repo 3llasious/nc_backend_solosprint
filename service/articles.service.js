@@ -61,13 +61,20 @@ exports.getCommentsForThisArticle = async (id) => {
 };
 
 exports.postCommentOnThisArticle = async (id, body) => {
+  if (!body) {
+    throw new BadRequestError("Login and body are required");
+  }
+  if (!body.author) {
+    throw new BadRequestError("Login is required to perform this action");
+  } else if (!body.body) {
+    throw new BadRequestError("Body is a required field");
+  }
   try {
     const comment = await fetchThisCommentOnThisArticle(id, body);
-    return comment[0];
+    return comment[0]; //the comment array with one value
   } catch {
     throw new NotFoundError("ID not found");
   }
-  //the comment array with one value
 };
 
 exports.VoteOnThisArticle = async (id, body) => {
