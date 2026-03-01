@@ -523,7 +523,49 @@ describe("/api/users/", () => {
       //Testing the shape of the object which allowed db values to change without breaking the tests
     });
   });
+  test("POST: responds with status 201 and adds a user to the db", async () => {
+    //method to be tested and expected behaviour from the API
+    //ACT
+    const userobj = {
+      username: "Ellasious",
+      name: "Ella Itopa",
+      avatar_url:
+        "https://i.pinimg.com/280x280_RS/05/38/47/053847002f93561c1ae10906e513a6d3.jpg",
+    };
+    const sendRequest = await request(app)
+      .post("/api/users")
+      .send(userobj)
+      .expect(201); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest; //<-- this is the full key result
+
+    const { user } = body; //<--- this is trying to get rows that we labelled as users in controller
+    //ASSERT
+
+    expect(typeof user.username).toBe("string");
+    expect(typeof user.name).toBe("string");
+    expect(typeof user.avatar_url).toBe("string");
+
+    //Testing the shape of the object which allowed db values to change without breaking the tests
+  });
 });
+
+describe("/api/users/:username", () => {
+  test("GET: responds with status 200 and fetches the specified user that exists in the db", async () => {
+    const sendRequest = await request(app)
+      .get("/api/users/butter_bridge")
+      .expect(200); //simulated sending a request and receiving a response
+
+    const { body } = sendRequest; //<-- this is the full key result
+
+    const { user } = body; //<--- this is trying to get rows that we labelled as users in controller
+
+    expect(typeof user.username).toBe("string");
+    expect(typeof user.name).toBe("string");
+    expect(typeof user.avatar_url).toBe("string");
+  });
+});
+
 describe("/api/comments/:comment_id", () => {
   test("DELETE: responds with status 204 and deletes the comment", async () => {
     //method to be tested and expected behaviour from the API
