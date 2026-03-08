@@ -21,10 +21,12 @@ GET routes:
   /api/topics
 - for all users
   /api/users
+- for a particlar user
+  /api/users/username
 
-queries:
-sort_by=:existing_column
-order=:ASC || ASC
+  get all articles queries:
+  sort_by=:existing_column
+  order=:ASC || ASC
 
 - and can be chained
 
@@ -34,6 +36,8 @@ POST routes:
 
 - to post a comment on an article
   /api/articles/:article_id/comments
+- to add a user to the users db
+  /api/users
 
 PATCH routes:
 
