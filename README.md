@@ -1,6 +1,9 @@
 # NC News Seeding
 
 View the live version here: https://nc-backend-solosprint.onrender.com
+For documentation on api endpoints: https://nc-backend-solosprint.onrender.com/api
+For front-end: https://the-digest.netlify.app
+And finally front-end repo: https://github.com/3llasious/nc-news-frontend.git
 
 Description:
 This is the back-end for a reddit-style news and media aggregation platflorm.
